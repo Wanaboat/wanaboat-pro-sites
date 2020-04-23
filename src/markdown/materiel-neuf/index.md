@@ -1,19 +1,10 @@
 ---
 templateKey: page
 title: Matériel neuf
-path: /materiel-neuf/
-date: 2016-12-17T15:04:10.000Z
-description: >-
-  Nous vous informons que le chantier sera fermé du lundi 23 décembre au vendredi 27 décembre. Nous ré-ouvrons dès le samedi 28 pour vous accueillir.
-featuredpost: false
-featuredimage: /images/01d2271f-a2aa-49ad-9843-f259572879de.jpeg
-tags:
-  - flavor
-  - tasting
 ---
 * **Accastillage**: poulies éco, poulies à billes, poulies winch, palans, réas, taquets, coinceurs , tourelles, emmagasineurs, filoirs, pontets, manilles, cadènes, crochets, mousquetons, rails et chariots, trappes de visite, bouchons de nable, vide-vite, cordages et bouts…
 * **Safrans et dérives**: sticks, rotules de sticks, têtes de safran, lames de safran, barres, aiguillots, femelots…
-* **Gréements**: mâts, bômes, tangons, lattes ridoirs, barres de flêches, pieds de mât, têtes de mât, réas, étais, haubans, drisses câble, vits de mulet, palans de trapèze…
+* ### **Gréements**: mâts, bômes, tangons, lattes ridoirs, barres de flêches, pieds de mât, têtes de mât, réas, étais, haubans, drisses câble, vits de mulet, palans de trapèze…
 * Lèvres de puits de dérive
 * Bailles à spi
 * Réserves de flottabilité
@@ -44,7 +35,7 @@ Nous croyons que grâce à notre grande expérience, à utiliser et tracter des 
 
 Nous pouvons aussi intervenir pour les adaptations et travaux d’entretien sur votre remorque (bers moulés, kit grosse roue, changement demi essieux, anneaux de suspension, amortisseur….)
 
-# Différentes gammes de taud:
+## Différentes gammes de taud:
 
 *Tauds économiques*:  en tissu polyester fin, légers, ils sont adaptés à un usage estival.
 
@@ -55,7 +46,9 @@ Nous pouvons aussi intervenir pour les adaptations et travaux d’entretien sur 
 ## Plusieurs formes de tauds
 
 ### Taud de dessus plat :
+
 Facile à installer et peut être utilisé bateau mâté ou non. L’anneau de fixation de la drisse de grand-voile aide à ce que l’eau s’évacue du taud et ne fasse pas de poche.
 
 ### Taud par dessus la bôme :
+
 La protection ultime à l’épreuve des intempéries .Il passe par dessus la bôme du bateau, et évite la formation de poches d’eau et permet à l’air de circuler.
