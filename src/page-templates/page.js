@@ -21,9 +21,9 @@ export const PageTemplate = ({ title, content, description, contentComponent }) 
 
   return (
     <Box
-    maxW={"900px"}
-    mx="auto"
-    p={{ xs:2, lg:10}}
+      maxW={"900px"}
+      mx="auto"
+      p={{ xs:2, lg:10}}
     >
       <Heading as="h1">{title}</Heading>
       { (description) ? <Heading as="h2">{description}</Heading> : null }

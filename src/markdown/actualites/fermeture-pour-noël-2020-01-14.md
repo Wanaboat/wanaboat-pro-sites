@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Fermeture pour Noël
-path: /actu2/
+path: /actualites/actu3/
 date: 2020-01-14T20:48:17.034Z
 description: >-
   Nous vous informons que le chantier sera fermé du lundi 23 décembre au

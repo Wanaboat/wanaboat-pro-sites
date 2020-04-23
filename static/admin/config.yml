@@ -78,6 +78,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "URL", name: "path", widget: "string"}
           - {label: "Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
@@ -87,6 +88,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "URL", name: "path", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/markdown/materiel-neuf/index.md"
@@ -95,6 +97,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "URL", name: "path", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           
       - file: "src/markdown/bateaux/index.md"
@@ -103,5 +106,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "URL", name: "path", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 

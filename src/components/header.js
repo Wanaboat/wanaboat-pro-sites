@@ -27,6 +27,7 @@ export const Header = ({ siteTitle }) => (
     w="100vw"
     justify={{ xs:"flex-end", lg:"center"}}
     position={{xs:"fixed", lg:"initial"}}
+    zIndex="modal"
   >
     <Menu />
     <Burger />

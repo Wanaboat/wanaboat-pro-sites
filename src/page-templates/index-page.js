@@ -36,7 +36,7 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
       bg="brand.dark1"
       p={{ xs: 30, lg: 100 }}
     >
-      <Stack spacing={10} w="750px">
+      <Stack spacing={{ xs:6, lg:10}} maxW="750px">
         <Box>
           <Heading
             as="h1"
@@ -45,7 +45,7 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
           >{heading}</Heading>
           <Text
             color="white"
-            fontSize={{ xs: 18, lg: 22 }}
+            fontSize={{ xs: 16, lg: 22 }}
             textTransform="uppercase"
             letterSpacing="0.35rem"
           >
@@ -62,7 +62,9 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
 
         <Box>
           <Text fontSize={{ xs:12, md:24}} fontWeight="bold" color="white" mb={4}>Accès et contact :</Text>
-          <SimpleGrid color="white" columns={{xs:1, lg:2}}>
+          <SimpleGrid
+            fontSize={{ xs: 14, lg: 18 }}
+            color="white" columns={{xs:1, lg:2}}>
             <Box>
               {address}
               <br />
@@ -89,35 +91,6 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
           </SimpleGrid>
         </Box>
       </Stack>
-      {/* <picture>
-        <source
-          media="(max-width: 799px)"
-          srcSet={HeroMobileWebp}
-          type="image/webp"
-        />
-        <source
-          media="(max-width: 799px)"
-          srcSet={HeroMobileJpg}
-          type="image/jpeg"
-        />
-
-        <source
-          media="(min-width: 800px)"
-          srcSet={HeroDesktopWebp}
-          type="image/webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcSet={HeroDesktopJpg}
-          type="image/jpeg"
-        />
-
-        <img
-          loading="lazy"
-          src="images/1280x800.jpg"
-          alt="Dériveurs Services, Dinard, Saint-Malo"
-        />
-      </picture> */}
     </Box>
   )
 }

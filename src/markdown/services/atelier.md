@@ -1,7 +1,7 @@
 ---
 templateKey: page
 title: Atelier
-path: /atelier/
+path: /services/atelier/
 ---
 Nous vous informons que le chantier sera fermé du lundi 23 décembre au vendredi 27 décembre. Nous ré-ouvrons dès le samedi 28 pour vous accueillir.
 

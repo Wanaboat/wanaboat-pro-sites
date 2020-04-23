@@ -20,7 +20,9 @@ import {
 import HeroDesktopJpg from "../images/hero-desktop.jpg"
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
+  <Flex
+    flexWrap={{ xs:"wrap", lg:"nowrap" }}
+  >
     {gridItems.map(item => (
       <SimpleGrid
         borderBottom="solid 1px"
@@ -34,22 +36,12 @@ const FeatureGrid = ({ gridItems }) => (
           position="relative"
         >
           <picture>
-            {/* <Image
-              src={HeroDesktopJpg}
-              loading="lazy"
-              zIndex="docked"
-              borderRadius="10px"
-              size="sm"
-              position="relative"
-              alt="Dériveurs Services, Dinard, Saint-Malo"
-            />     
-            */}
             <Img style={{
                 zIndex:200,
                 borderRadius:'4px'
               }} fixed={item.image.childImageSharp.fixed} />
           </picture>
-          <Box w="50%" borderRadius={8} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
+          <Box w="360px" borderRadius={8} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
         </Flex>
         <Box
           p={{ xs: 10, lg: 50 }}
@@ -85,7 +77,7 @@ const FeatureGrid = ({ gridItems }) => (
         </Box>
       </SimpleGrid>
     ))}
-  </div>
+  </Flex>
 )
 
 FeatureGrid.propTypes = {

@@ -17,7 +17,6 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    console.log( posts )
     return (
       <>
         {posts &&
@@ -27,10 +26,11 @@ class BlogRoll extends React.Component {
               bg="white"
               templateColumns="96px calc( 100% - 106px ) "
               key={post.id}
-              w={"32%"}
+              w={{ xs:"100%", lg:"32%"}}
               boxShadow="xs"
               borderRadius="4px"
               p={4}
+              mb={{ xs:4, lg:0 }}
             >
               <picture>
                 <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
@@ -45,7 +45,7 @@ class BlogRoll extends React.Component {
                   as={GatsbyLink}
                   mb={2}
                   to={post.frontmatter.path}
-                  fontSize={{ xs:14, lg:16}}
+                  fontSize={{ xs:18, lg:16}}
                   fontWeight="bold"
                 >
                   {post.frontmatter.title}
@@ -53,7 +53,7 @@ class BlogRoll extends React.Component {
                 <small> le {post.frontmatter.date}</small>
                 </Heading>
                 <Text
-                  fontSize={{ xs:12, lg:14}}
+                  fontSize={{ xs:14, lg:14}}
                 >
                   {post.excerpt}
                 </Text>
