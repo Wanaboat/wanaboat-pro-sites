@@ -56,5 +56,21 @@ offers:
 
       * Matos
     title: Matériel neuf
+  - buttonLabel: Toutes nos occasions
+    buttonTarget: occasions/
+    image: /img/image-materiel-occasion.jpg
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
+      viverra pharetra. Donec eu sodales urna, vitae blandit dui. Nullam
+      hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi. Vivamus
+      non condimentum tellus. Proin eu molestie massa. Vestibulum tincidunt,
+      tortor vitae venenatis rutrum, augue libero ullamcorper nisl, sed egestas
+      erat lectus ut dui. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Nunc imperdiet viverra pharetra. Donec eu sodales urna, vitae
+      blandit dui. Nullam hendrerit accumsan augue id feugiat. Vivamus nec
+      convallis nisi. Vivamus non condimentum tellus. Proin eu molestie massa.
+      Vestibulum tincidunt, tortor vitae venenatis rutrum, augue libero
+      ullamcorper nisl, sed egestas erat lectus ut dui. 
+    title: Occasion
 ---
 
