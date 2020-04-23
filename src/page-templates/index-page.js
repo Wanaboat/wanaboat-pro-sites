@@ -63,16 +63,17 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
         <Box>
           <Text fontSize={{ xs:12, md:24}} fontWeight="bold" color="white" mb={4}>Accès et contact :</Text>
           <SimpleGrid
-            fontSize={{ xs: 14, lg: 18 }}
+            fontSize={{ xs: 12, lg: 18 }}
             color="white" columns={{xs:1, lg:2}}>
-            <Box>
+            <Text>
               {address}
               <br />
               {openingHours}
-            </Box>
+            </Text>
             <Box>
-              <Text>Tél : <Link href={`tel:+${phoneNumberRaw}`}>{phoneNumber}</Link></Text>
+              <Text mb={4}>Tél : <Link href={`tel:+${phoneNumberRaw}`}>{phoneNumber}</Link></Text>
               <PseudoBox
+                mt={2}
                 as={GatsbyLink}
                 to="/nous-trouver/"
                 backgroundColor="brand.light1"
@@ -115,8 +116,9 @@ export const IndexPageTemplate = ({
       >
         <Text
           textTransform="uppercase"
-          fontSize={{ xs: "xs", lg: "base" }}
+          fontSize={{ xs: 10, lg: "base" }}
           letterSpacing="0.15rem"
+          textAlign="center"
         >
           {alertBanner}
         </Text>
@@ -137,6 +139,7 @@ export const IndexPageTemplate = ({
         p={10}
         borderBottom="solid 1px"
         borderBottomColor="gray.100"
+        flexWrap={{ xs:"wrap", lg:"nowrap"} }
       >
         <BlogRoll />
       </Flex>

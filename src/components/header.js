@@ -1,7 +1,7 @@
 // import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Box, Flex } from "@chakra-ui/core";
+import { Box, Flex, Text } from "@chakra-ui/core";
 
 import HamburgerMenu from "react-hamburger-button";
 
@@ -25,10 +25,12 @@ export const Header = ({ siteTitle }) => (
     top="0"
     left="0"
     w="100vw"
-    justify={{ xs:"flex-end", lg:"center"}}
+    justify={{ xs:"space-between", lg:"center"}}
+    align={{ xs:"center", lg:"initial"}}
     position={{xs:"fixed", lg:"initial"}}
     zIndex="modal"
   >
+    <Text color="brand.light1" fontWeight="bold" pl={2} display={{ xs:"initial", lg:"none"}}>Dériveurs Services</Text>
     <Menu />
     <Burger />
   </Flex>

@@ -20,9 +20,7 @@ import {
 import HeroDesktopJpg from "../images/hero-desktop.jpg"
 
 const FeatureGrid = ({ gridItems }) => (
-  <Flex
-    flexWrap={{ xs:"wrap", lg:"nowrap" }}
-  >
+  <Box>
     {gridItems.map(item => (
       <SimpleGrid
         borderBottom="solid 1px"
@@ -77,7 +75,7 @@ const FeatureGrid = ({ gridItems }) => (
         </Box>
       </SimpleGrid>
     ))}
-  </Flex>
+  </Box>
 )
 
 FeatureGrid.propTypes = {
