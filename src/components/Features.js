@@ -2,6 +2,7 @@ import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Img from "gatsby-image"
 
 import {
   Box,
@@ -33,7 +34,7 @@ const FeatureGrid = ({ gridItems }) => (
           position="relative"
         >
           <picture>
-            <Image
+            {/* <Image
               src={HeroDesktopJpg}
               loading="lazy"
               zIndex="docked"
@@ -41,9 +42,14 @@ const FeatureGrid = ({ gridItems }) => (
               size="sm"
               position="relative"
               alt="Dériveurs Services, Dinard, Saint-Malo"
-            />
+            />     
+            */}
+            <Img style={{
+                zIndex:200,
+                borderRadius:'4px'
+              }} fixed={item.image.childImageSharp.fixed} />
           </picture>
-          <Box w="50%" borderRadius={10} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
+          <Box w="50%" borderRadius={8} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
         </Flex>
         <Box
           p={{ xs: 10, lg: 50 }}

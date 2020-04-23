@@ -1,4 +1,6 @@
 ---
+templateKey: index-page
+path: /
 alertBanner: Nous restons ouverts pendant le confinement
 heading: Dériveurs Services
 subheading: Spécialiste voile légère en Bretagne

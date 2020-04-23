@@ -33,7 +33,8 @@ class BlogRoll extends React.Component {
               p={4}
             >
               <picture>
-                <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} />
+                <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
+                {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
               </picture>
               <Box pl="10px">
                 <Heading
@@ -132,7 +133,13 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "D/M/Y")
-                featuredImage
+                featuredImage {
+                  childImageSharp {
+                    fixed(width: 100, height: 100) {
+                      ...GatsbyImageSharpFixed
+                   }
+                  }
+                }
               }
             }
           }

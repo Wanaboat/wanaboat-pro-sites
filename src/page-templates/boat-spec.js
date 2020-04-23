@@ -93,14 +93,13 @@ export const pageQuery = graphql`
         title
         modelID
         description
-        featuredImage
-        #featuredImage {
-        #  childImageSharp {
-        #    fixed(width: 800, height: 600) {
-        #      ...GatsbyImageSharpFixed
-        #   }
-        #  }
-        #}
+        featuredImage {
+          childImageSharp {
+            fixed(width: 800, height: 600) {
+              ...GatsbyImageSharpFixed
+           }
+          }
+        }
       }
     }
   }

@@ -21,7 +21,7 @@ export const Header = ({ siteTitle }) => (
   <Flex
     as="header"
     bg="brand.dark1"
-    h={{xs:"50px", lg:"70px"}}
+    h={{xs:"50px", lg:"80px"}}
     top="0"
     left="0"
     w="100vw"

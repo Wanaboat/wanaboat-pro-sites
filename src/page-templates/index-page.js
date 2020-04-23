@@ -8,6 +8,7 @@ import Layout from "../components/Layout"
 import Features from "../components/Features"
 import BlogRoll from "../components/BlogRoll"
 // import AdsRoll from "../components/AdsRoll"
+import Img from "gatsby-image"
 
 import HeroMobileWebp from "../images/hero-mobile.webp"
 import HeroMobileJpg from "../images/hero-mobile.jpg"
@@ -28,7 +29,7 @@ import {
   Stack
 } from "@chakra-ui/core";
 
-const Hero = ({ heading, subheading, description, phoneNumber, address, phoneNumberRaw, openingHours }) => {
+const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw, openingHours }) => {
   return (
     <Box
       id="home-hero"
@@ -56,7 +57,7 @@ const Hero = ({ heading, subheading, description, phoneNumber, address, phoneNum
           fontSize={{ xs: 14, lg: 18 }}
           color="white"
         >
-          {description}
+          {chapo}
         </Text>
 
         <Box>
@@ -127,14 +128,11 @@ export const IndexPageTemplate = ({
   phoneNumber,
   phoneNumberRaw,
   openingHours,
-  image,
-  title,
   heading,
   subheading,
-  mainpitch,
   description,
-  services,
-  intro,
+  offers,
+  chapo,
 }) => (
     <>
       <Flex
@@ -153,7 +151,7 @@ export const IndexPageTemplate = ({
       <Hero
         heading={heading}
         subheading={subheading}
-        description={description}
+        chapo={chapo}
         address={address}
         openingHours={openingHours}
         phoneNumber={phoneNumber}
@@ -169,138 +167,7 @@ export const IndexPageTemplate = ({
       >
         <BlogRoll />
       </Flex>
-      {/* <SimpleGrid
-        borderBottom="solid 1px"
-        borderBottomColor="gray.100"
-        columns={{ xs: 1, lg: 2 }}>
-        <Flex
-          backgroundColor="gray.50"
-          align="center"
-          justify="center"
-          p={{ xs: 10, lg: 50 }}
-          position="relative"
-        >
-          <picture>
-            <Image
-              src={HeroDesktopJpg}
-              loading="lazy"
-              zIndex="docked"
-              borderRadius="10px"
-              size="sm"
-              position="relative"
-              alt="Dériveurs Services, Dinard, Saint-Malo"
-            />
-          </picture>
-          <Box w="50%" borderRadius={10} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
-        </Flex>
-        <Box
-          p={{ xs: 10, lg: 50 }}
-          spacing={6}
-        >
-          <Heading
-            as="h3"
-            fontSize={{ xs: 'base', lg: '3xl' }}
-            mb={4}
-            display="inline-block"
-            borderBottom="solid 3px"
-            borderColor="brand.light2"
-          >
-            Titre
-          </Heading>
-          <Text mb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum tellus. Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui. Ut eu nisl semper, pretium sem ac, maximus arcu.
-          </Text>
-          <PseudoBox
-            as={GatsbyLink}
-            backgroundColor="brand.light1"
-            color="gray.700"
-            letterSpacing="0.035rem"
-            fontSize={13}
-            fontWeight="bold"
-            textTransform="uppercase"
-            borderRadius={3}
-            py={2}
-            px={4}
-          >
-            Services en détail
-          </PseudoBox>
-        </Box>
-      </SimpleGrid>
-      <SimpleGrid
-        borderBottom="solid 1px"
-        borderBottomColor="gray.100"
-        columns={{ xs: 1, lg: 2 }}>
-        <Flex
-          backgroundColor="gray.50"
-          align="center"
-          justify="center"
-          p={{ xs: 10, lg: 50 }}
-          position="relative"
-        >
-          <picture>
-            <Image
-              src={HeroDesktopJpg}
-              loading="lazy"
-              zIndex="docked"
-              borderRadius="10px"
-              size="sm"
-              position="relative"
-              alt="Dériveurs Services, Dinard, Saint-Malo"
-            />
-          </picture>
-          <Box w="50%" borderRadius={10} h="200px" bg="brand.light2" zIndex="base" position="absolute" bottom="40px" />
-        </Flex>
-        <Box
-          p={{ xs: 10, lg: 50 }}
-        >
-          <Heading
-            as="h3"
-            fontSize={{ xs: 'base', lg: '3xl' }}
-            mb={4}
-            display="inline-block"
-            borderBottom="solid 3px"
-            borderColor="brand.light2"
-          >
-            Titre
-          </Heading>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum tellus. Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui. Ut eu nisl semper, pretium sem ac, maximus arcu.
-          </Text>
-        </Box>
-      </SimpleGrid> */}
-
-<Features gridItems={services.list} />
-
-      {/*
-      {mainpitch.title}
-
-      {mainpitch.description}
-
-      {description}
-
-      <picture>
-        <img
-          width="100%"
-          loading="lazy"
-          sizes="(max-width: 480px) 100vw, 400px"
-          srcSet={
-            "https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667 320w,\
-                  https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667 800w"
-          }
-          src={
-            "https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667"
-          }
-          alt="Dériveurs Services, Dinard, Saint-Malo"
-        />
-      </picture>
-
-      <Features gridItems={services.list} />
-
-      {/* <BlogRoll /> */}
-
-      {/* <AdsRoll limite={3} /> */}
-
-
+      <Features gridItems={offers} />
     </>
   )
 
@@ -310,15 +177,12 @@ IndexPageTemplate.propTypes = {
   alertBanner: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    services: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  console.log( frontmatter );
 
   return (
     <Layout>
@@ -330,24 +194,22 @@ const IndexPage = ({ data }) => {
         phoneNumber={frontmatter.phoneNumber}
         phoneNumberRaw={frontmatter.phoneNumberRaw}
         image={frontmatter.image}
-        title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        services={frontmatter.services}
+        chapo={frontmatter.chapo}
+        offers={frontmatter.offers}
       />
     </Layout>
   )
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+// IndexPage.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       frontmatter: PropTypes.object,
+//     }),
+//   }),
+// }
 
 export default IndexPage
 
@@ -360,23 +222,22 @@ export const pageQuery = graphql`
         openingHours
         phoneNumber
         phoneNumberRaw
-        title
         heading
         subheading
-        mainpitch {
+        chapo
+        offers {
           title
-          description
-        }
-        services {
-          list {
-            title
-            text
-            image
-            buttonLabel
-            buttonTarget
+          text
+          image {
+            childImageSharp {
+              fixed(width: 400, height: 400) {
+                ...GatsbyImageSharpFixed
+             }
+            }
           }
+          buttonLabel
+          buttonTarget
         }
-        description
       }
     }
   }

@@ -18,7 +18,7 @@ backend:
 collections:
   - name: "actu"
     label: "Actu"
-    folder: "src/markdown/actualites"
+    folder: "src/markdown"
     create: true
     slug: "actualites/{{slug}}-{{year}}.{{month}}.{{day}}"
     fields:
@@ -26,16 +26,19 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featuredImage", widget: image}
+      - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+
   - name: "boats"
     label: "Bateaux"
-    folder: "src/markdown/bateaux"
+    folder: "src/markdown"
     create: true
     slug: "bateaux/{{slug}}-{{year}}.{{month}}.{{day}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "boat-spec"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Wanaboat ID", name: "modelID", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredImage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -48,24 +51,27 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Template Key", name: "path", widget: "hidden", default: "/"}
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string},{label: SubTitle, name: subtitle, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Services, name: services, widget: object, fields: [
-              {label: List, name: list, widget: list, fields: [
-                {label: Titre, name: title, widget: text},
-                {label: Text, name: text, widget: mardown},
-                {label: Image, name: image, widget: file},
-              ]}]}
-          - {label: Main, name: main, widget: object, fields:
-            [
-              {label: Heading, name: heading, widget: string},
-              {label: Description, name: description, widget: text}
-            ]
-          }
+          - {label: "Bannière", name: "alertBanner", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Subheading", name: "subheading", widget: "string"}
+          - {label: "Chapo", name: "chapo", widget: "markdown"}
+          - {label: "address", name: "address", widget: "string"}
+          - {label: "openingHours", name: "openingHours", widget: "string"}
+          - {label: "phoneNumber", name: "phoneNumber", widget: "string"}
+          - {label: "phoneNumberRaw", name: "phoneNumberRaw", widget: "string"}
+          - label: "Offres"
+            name: "offers"
+            widget: "list"
+            fields:
+              - {label: Titre, name: title, widget: string, default: "Everything is awesome!"}
+              - {label: Text, name: text, widget: markdown, default: "Everything is awesome!"}
+              - {label: Image, name: image, widget: file}
+              - {label: Bouton text, name: buttonLabel, widget: string}
+              - {label: Bouton cible, name: buttonTarget, widget: string}
+
+              
+
+
       - file: "src/markdown/nous-trouver/index.md"
         label: "Nous trouver"
         name: "nous-trouver"
@@ -74,6 +80,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+
       - file: "src/markdown/services/index.md"
         label: "Services"
         name: "services"
@@ -81,6 +88,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+
       - file: "src/markdown/materiel-neuf/index.md"
         label: "Matériel neuf"
         name: "materiel-neuf"
@@ -88,6 +96,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          
       - file: "src/markdown/bateaux/index.md"
         label: "Bateaux"
         name: "bateaux"

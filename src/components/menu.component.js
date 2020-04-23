@@ -81,8 +81,9 @@ class Menu extends Component {
               as={GatsbyLink}
               color="white"
               fontWeight={{ xs:"light", lg:"regular"}}
-              fontSize={{ xs:22, lg:13}}
-              letterSpacing=".07rem"
+              fontSize={{ xs:22, lg:12}}
+              letterSpacing=".20rem"
+              fontWeight="bold"
               w={{ xs:"100%", lg:"inherit"}}
               borderBottom="solid 1px"
               borderBottomColor="transparent"

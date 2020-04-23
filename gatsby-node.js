@@ -1,9 +1,7 @@
 const path = require('path')
 
-// const slugify = require('slugify')
-// const { createFilePath } = require('gatsby-source-filesystem')
-// const { fmImagesToRelative } = require('gatsby-remark-relative-images')
-
+const { createFilePath } = require('gatsby-source-filesystem')
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({graphql, actions}) => {
   
@@ -18,7 +16,6 @@ exports.createPages = ({graphql, actions}) => {
           id
           frontmatter {
             path
-            tags
             templateKey
           }
         }
@@ -38,7 +35,6 @@ exports.createPages = ({graphql, actions}) => {
     if( edge.node.frontmatter.path ){
       createPage({
         path: edge.node.frontmatter.path,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/page-templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -56,17 +52,16 @@ exports.createPages = ({graphql, actions}) => {
 
 };
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  fmImagesToRelative(node) // convert image paths for gatsby images
 
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-//   fmImagesToRelative(node) // convert image paths for gatsby images
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
