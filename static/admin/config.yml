@@ -1,0 +1,98 @@
+locale: 'fr'
+media_folder: static/img
+public_folder: /img
+
+logo_url: https://www.lelynx.fr/dist/svg/logo.svg
+
+backend:
+  name: github
+  repo: Wanaboat/wanaboat-pro-sites
+  branch: master
+  commit_messages:
+  create: 'Create {{collection}} “{{slug}}”'
+  update: 'Update {{collection}} “{{slug}}”'
+  delete: 'Delete {{collection}} “{{slug}}”'
+  uploadMedia: '[skip ci] Upload “{{path}}”'
+  deleteMedia: '[skip ci] Delete “{{path}}”'
+
+collections:
+  - name: "actu"
+    label: "Actu"
+    folder: "src/markdown/actualites"
+    create: true
+    slug: "actualites/{{slug}}-{{year}}.{{month}}.{{day}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featuredImage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "boats"
+    label: "Bateaux"
+    folder: "src/markdown/bateaux"
+    create: true
+    slug: "bateaux/{{slug}}-{{year}}.{{month}}.{{day}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featuredImage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/markdown/index.md"
+        label: "Homepage"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Template Key", name: "path", widget: "hidden", default: "/"}
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string},{label: SubTitle, name: subtitle, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Description, name: description, widget: string}
+          - {label: Services, name: services, widget: object, fields: [
+              {label: List, name: list, widget: list, fields: [
+                {label: Titre, name: title, widget: text},
+                {label: Text, name: text, widget: mardown},
+                {label: Image, name: image, widget: file},
+              ]}]}
+          - {label: Main, name: main, widget: object, fields:
+            [
+              {label: Heading, name: heading, widget: string},
+              {label: Description, name: description, widget: text}
+            ]
+          }
+      - file: "src/markdown/nous-trouver/index.md"
+        label: "Nous trouver"
+        name: "nous-trouver"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/markdown/services/index.md"
+        label: "Services"
+        name: "services"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/markdown/materiel-neuf/index.md"
+        label: "Matériel neuf"
+        name: "materiel-neuf"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/markdown/bateaux/index.md"
+        label: "Bateaux"
+        name: "bateaux"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+

@@ -1,0 +1,299 @@
+import React, { Component } from "react"
+import { graphql, Link } from "gatsby"
+import { AppLayout } from "../app-layout.component"
+import { SEO, BlogRoll } from "../components"
+
+import slugify from "slugify"
+
+import sail from "../../static/sailing.svg"
+import warehouse from "../../static/warehouse.svg"
+import tools from "../../static/tools.svg"
+
+import HeroMobileWebp from "../images/hero-mobile.webp";
+import HeroMobileJpg from "../images/hero-mobile.jpg";
+
+import HeroDesktopWebp from "../images/hero-desktop.webp";
+import HeroDesktopJpg from "../images/hero-desktop.jpg";
+
+import Excerpt from "../components/ad.richtext.excerpt.jsx";
+
+const Hero = ({ pageContext }) => {
+  return (
+    <section id="home-hero" className="hero is-dark is-fullheight">
+      <div className="hero-body has-text-centered">
+        <div className="container">
+          <h1 className="title is-size-1	has-text-white">Dériveur service</h1>
+          <h2 className="subtitle is-size-3	has-text-white">
+            Le spécialiste du dériveur en Bretagne
+          </h2>
+          <p>Tel : 06 12 34 56 78 • 33 rue André Citroën DINARD</p>
+        </div>
+      </div>
+      <picture>
+        <source media="(max-width: 799px)" srcSet={HeroMobileWebp} type="image/webp" />
+        <source media="(max-width: 799px)" srcSet={HeroMobileJpg} type="image/jpeg" />
+
+        <source media="(min-width: 800px)" srcSet={HeroDesktopWebp} type="image/webp" />
+        <source media="(min-width: 800px)" srcSet={HeroDesktopJpg} type="image/jpeg" />
+
+        <img loading="lazy" src="images/1280x800.jpg" alt="Dériveurs Services, Dinard, Saint-Malo" />
+      </picture>
+    </section>
+  )
+}
+
+const NewsSummary = ({ pageContext }) => {
+  return (
+    <div>
+      <h5 className="subtitle is-3">Dernières actualités</h5>
+      <div className="content">
+        <p>
+          Les dernières actualités du chantiers, nos réalisations, navigations
+          en groupe.{" "}
+        </p>
+      </div>
+
+      <div className="card box">
+        <div className="card-image">
+          <figure className="image is-4by3">
+            <img
+              src="https://via.placeholder.com/488x366.png"
+              alt="Placeholder image"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+        <div className="card-content">
+          <div className="media">
+            <div className="media-content">
+              <p className="title is-4">Navigation de Noël sur la Rance</p>
+            </div>
+          </div>
+          <div className="content">
+            La navigation de Noël a bien eu lieu sur la Rance. On a cassé la glace pour mettre à l'eau.
+            <br />
+            <time className="is-small" dateTime="2016-1-1">14 Décembre 2016 à 11:09</time>
+          </div>
+        </div>
+      </div>
+
+      <p>
+      <Link
+            className="button is-info is-light is-small"
+            to="/actualites"
+            name="Actualités dériveurs services"
+          >
+            Toutes nos actus →
+          </Link>
+        </p>
+
+    </div>
+  )
+}
+
+const AdsSummary = ({ ads }) => {
+  return (
+    <div>
+      <h5 className="subtitle is-3">Dernières occasions</h5>
+
+      <div className="content">
+        <p>
+          Voici nos dernières occasions dériveurs & dayboats synchronisé avec
+          Wanaboat.fr{" "}
+          <a href="https://www.wanaboat.fr">annonces de bateaux d'occasion</a>.{" "}
+        </p>
+      </div>
+
+      {ads.map((ad, index) => (
+        <div className="box" key={index}>
+          <Link
+            to={`${"/annonces/" + slugify(ad.node.name, { lower: true })}`}
+            key={ad.node.id}
+            title={ad.node.name}
+            className="card"
+          >
+            <article className="media">
+              <div className="media-left">
+                <figure className="">
+                  <img
+                    width="100"
+                    height="100"
+                    alt={ad.node.name}
+                    loading="lazy"
+                    src={
+                      "https://wanaboatimages-99dc.kxcdn.com/photos/" +
+                      ad.node.images.url[0] +
+                      "?quality=75&fit=cover&width=100&height=100&format=jpg"
+                    }
+                  />
+                </figure>
+              </div>
+              <div className="media-content">
+                <div className="content">
+                  <p>
+                    <strong>{ad.node.name}</strong>{" "}
+                    <small>{ad.node.date}</small>
+                    <br />
+                    <Excerpt data={ad.node.childContentfulAdDescriptionRichTextNode.json} />
+                  </p>
+                </div>
+                <button className="button is-warning">Voir l'annonce →</button>
+              </div>
+            </article>
+          </Link>
+        </div>
+      ))}
+      <Link
+            className="button is-info is-light is-small"
+            to="/occasions/"
+            name="Occasions dériveurs services"
+          >
+            Toutes nos occasions →
+          </Link>
+    </div>
+  )
+}
+
+const Services = () => {
+  return(
+
+    <div className="section container is-primary">
+    <h1 className="title">Services que nous proposons :</h1>
+    <div className="columns">
+    <div className="column">
+        <div className="box">
+          <article className="media">
+            <div className="media-left">
+              <img loading="lazy" width="40" height="40" src={tools} alt="Atelier" />
+            </div>
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>Atelier</strong>{" "}
+                  <br />
+                  Dériveurs Services est également un atelier qui répare et entretient vos dériveurs.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div className="column">
+        <div className="box">
+          <article className="media">
+            <div className="media-left">
+              <img width="40" height="40" src={sail} alt="Navigation" />
+            </div>
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>Bateaux occasion</strong>{" "}
+                  <br />
+                  Nous proposons une selection de bateaux d'occasion, <em>dériveurs</em> et également des dayboats.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div className="column">
+        <div className="box">
+          <article className="media">
+            <div className="media-left">
+              <img width="40" height="40" src={sail} alt="Navigation" />
+            </div>
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>Hivernage</strong>{" "}
+                  <br />
+                  Nous hivernons votre bateau et lui faisons le check-up de Printemps avant de retourner à l'eau.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  )
+}
+
+class IndexPage extends Component {
+  render() {
+    // const ads = this.props.data.allContentfulAd.edges;
+
+    // const { ads } = this.props.data.edges;
+    // console.log( ads )
+    // console.log(this.props.data)
+    return (
+      <AppLayout>
+        <SEO
+          title="Dériveurs Services, atelier, occasion"
+          description="Dériveur Services, atelier, occasion, tout ce qu'il faut pour votre bateaux, de l'achat à l'entretien à Dinard en Bretagne"
+        />
+        <Hero />
+        <Services />
+        <div className="section container">
+          <h3 className="title is-3">
+            Dériveurs est le spécialiste du dériveur en Bretagne Nord
+          </h3>
+          <div className="columns">
+            
+            <div className="column is-one-half">
+              <picture>
+              <img
+                width="100%"
+                loading="lazy"
+                sizes="(max-width: 480px) 100vw, 400px"
+                srcSet={
+                  "https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667 320w,\
+                  https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667 800w"
+                }
+                src={"https://maps.googleapis.com/maps/api/staticmap?center=48.6333,-2.0667&zoom=6&autoscale=1&size=600x300&maptype=roadmap&key=AIzaSyC7O1XSp3BY1qkSUWKhR0hl4mOHcCIxi_U&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C48.6333,-2.0667"} alt="Dériveurs Services, Dinard, Saint-Malo"
+              />
+              </picture>
+              <p>
+                <strong>Horaires : </strong> Mardi au Samedi de 14h à 18h
+              </p>  
+            </div>
+          </div>
+        </div>
+        <div className="section container is-primary">
+          <div className="columns is-8">
+            <div className="column is-one-half">
+              {/* <AdsSummary ads={this.props.data.ads.edges} /> */}
+            </div>
+            <div className="column">
+              {/* <BlogRoll /> */}
+            </div>
+          </div>
+        </div>
+      </AppLayout>
+    )
+  }
+}
+
+export default IndexPage
+
+export const pageQuery = graphql`
+  query home {
+    ads: allContentfulAd(limit: 4, filter: { userId: { eq: 14 } }) {
+      edges {
+        node {
+          id
+          slug
+          name
+          date
+          images {
+            url
+          }
+          childContentfulAdDescriptionRichTextNode{
+            json
+          }
+        }
+      }
+    }
+  }
+`
