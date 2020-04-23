@@ -14,11 +14,47 @@ phoneNumberRaw: 33612345678
 offers:
   - buttonLabel: Nos services
     buttonTarget: /services/
-    text: /img/catamaran.jpg
+    image: /img/catamaran.jpg
+    text: >-
+      Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis
+      rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
+      viverra pharetra.
+
+
+      Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue
+      id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum
+      tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+      imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui.
+      Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi.
+      Vivamus non condimentum tellus.
+
+
+      * Atelier
+
+      * Hivernage
     title: Services
   - buttonLabel: Le matériel neuf
     buttonTarget: /materiel-neuf/
-    text: /img/remorque-combinee.jpg
+    image: /img/remorque-combinee.jpg
+    text: >-
+      Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis
+      rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
+      viverra pharetra.
+
+
+      Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue
+      id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum
+      tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+      imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui.
+      Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi.
+      Vivamus non condimentum tellus.
+
+
+      * Voilerie
+
+      * Matos
     title: Matériel neuf
 ---
 
