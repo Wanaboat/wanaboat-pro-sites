@@ -2,7 +2,8 @@
 templateKey: boat-spec
 title: Europe
 modelID: 5dadfb6f884e0
-description: Le Skiff des équipages légers
+path: /bateaux/europe/
+description: Le dériveur solo élégant et racé
 featuredImage: /img/deriveur-europe.jpg
 ---
 L’Europe est un solitaire pour gabarit léger, un classique de la voile légère, bateau fin offrant de bonnes sensations de planning.
