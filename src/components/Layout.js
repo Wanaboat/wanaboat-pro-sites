@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/core"
 import theme from '../theme/theme';
 import { Header, Footer } from "../components"
-import '../scss/styles.scss'
+// import '../scss/styles.scss'
 
 // Global application wrapper
 export const AppLayout = ({ children, pageContext }) => (

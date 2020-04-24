@@ -18,7 +18,7 @@ backend:
 collections:
   - name: "actu"
     label: "Actu"
-    folder: "src/markdown"
+    folder: "src/markdown/actualites/"
     create: true
     slug: "actualites/{{slug}}-{{year}}.{{month}}.{{day}}"
     fields:
@@ -32,7 +32,7 @@ collections:
 
   - name: "boats"
     label: "Bateaux"
-    folder: "src/markdown"
+    folder: "src/markdown/bateaux/"
     create: true
     slug: "bateaux/{{slug}}-{{year}}.{{month}}.{{day}}"
     fields:
@@ -68,9 +68,6 @@ collections:
               - {label: Image, name: image, widget: file}
               - {label: Bouton text, name: buttonLabel, widget: string}
               - {label: Bouton cible, name: buttonTarget, widget: string}
-
-              
-
 
       - file: "src/markdown/nous-trouver/index.md"
         label: "Nous trouver"
