@@ -14,17 +14,46 @@ import {
   PseudoBox,
   Stack
 } from "@chakra-ui/core";
+import { Radio, RadioGroup } from "@chakra-ui/core"
+
 
 class BoatsRoll extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      ads: null,
+      filter: 'all'
+    }
+  }
+
   render() {
+
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const { filter } = this.state;
+    const handleFilter = (value) => {
+      this.setState({
+        filter: value,
+       });
+    }
     return (
       <>
+        <Stack
+              display={{ xs:"none", lg:"flex"}}
+              borderBottom="solid 3px" mb={8} px={2} py={4} borderColor="brand.light1" isInline spacing={8}>
+              <Text>Filtrer :</Text>
+              <RadioGroup defaultValue="all" name="filter" isInline spacing={8} onChange={(e) => { handleFilter(e.target.value) }}>
+                <Radio value="all">Tous les bateaux</Radio>
+                <Radio value="solo">Solo</Radio>
+                <Radio value="double">Double</Radio>
+                <Radio value="équipage">Équipage</Radio>
+              </RadioGroup>
+            </Stack>
         {posts &&
           posts.map(({ node: post }) => (
 
-
+             filter === 'all' || filter === post.frontmatter.crew  ? 
             <Grid
               as="article"
               bg="white"
@@ -35,8 +64,8 @@ class BoatsRoll extends React.Component {
               mb={0}
               borderTop="solid 1px"
               borderTopColor="gray.100"
-              h={{ xs:"auto", lg:"200px"}}
-              mb={{xs:0, lg:10}}
+              h={{ xs:"auto", lg:"220px"}}
+              
             >
               <Box
                 display={{ xs:"none", lg:"initial"}}
@@ -50,10 +79,12 @@ class BoatsRoll extends React.Component {
               <Box
                 display={{ xs:"none", lg:"initial"}}
               >
+                {post.frontmatter.featuredImage ? 
                 <picture>
-                <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
-                {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
-              </picture>
+                  <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
+                  {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
+                </picture>
+              :null}
               </Box>
               
               <Stack spacing={4} px={10} py={5}>
@@ -98,46 +129,8 @@ class BoatsRoll extends React.Component {
 
               </Stack>
             </Grid>
+            :null
 
-
-            // <Grid
-            //   as="article"
-            //   bg="white"
-            //   templateColumns="96px calc( 100% - 106px ) "
-            //   key={post.id}
-            //   w={{ xs:"100%"}}
-            //   boxShadow="xs"
-            //   borderRadius="4px"
-            //   p={4}
-            //   mb={{ xs:4, lg:10 }}
-            // >
-            //   <picture>
-            //     <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
-            //   </picture>
-            //   <Box pl="10px">
-            //     <Heading
-            //       as="h4"
-            //       fontSize={{ xs:14, lg:16}}
-            //     >
-            //     <Link
-            //       as={GatsbyLink}
-            //       mb={2}
-            //       to={post.frontmatter.path}
-            //       fontSize={{ xs:18, lg:16}}
-            //       fontWeight="bold"
-            //     >
-            //       {post.frontmatter.title}
-            //     </Link>
-            //     </Heading>
-            //     <Text
-            //       fontSize={{ xs:14, lg:14}}
-            //     >
-            //       {post.frontmatter.crew}
-            //       {post.excerpt}
-            //     </Text>
-            //   </Box>
-
-            // </Grid>
           ))}
 
         

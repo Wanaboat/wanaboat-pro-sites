@@ -2,10 +2,10 @@
 templateKey: boat-spec
 title: 29er
 description: Le Skiff des équipages légers
-featuredImage: /img/29er-skiff-double-trapèze-occasion-dériveur-services-10.jpg
-path: /bateaux/29er/
+featuredImage: /img/contender.jpg
+path: /bateaux/contender/
 modelID: 5dadfb6f884e0
-crew: Double
+crew: double
 brand: Ovington
 ---
 Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.

@@ -1,17 +1,14 @@
 ---
 templateKey: boat-spec
-title: 29er
+title: Yole OK
 description: Le Skiff des équipages légers
-featuredImage: /img/29er-skiff-double-trapèze-occasion-dériveur-services-10.jpg
-path: /bateaux/29er/
+featuredImage: /img/yole-ok.jpg
+path: /bateaux/yole-ok/
 modelID: 5dadfb6f884e0
-crew: Double
+crew: double
 brand: Ovington
 ---
-Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.
-
-Les bateaux sont durables, bien équipés et pleinement compétitifs tout de suite. Une grand-voile entièrement lattée, un foc est auto-vireur et un spi asymétrique, le 29er est de la dynamite pure.
-
+Dessinée par Knud Olsen qui lui a donné son petit nom de ‘OK’, la Yole OK est un petit solitaire à la fois léger et vivant. Ses formes arrondies la rendent agréable au rappel et à regarder. La Yole OK reste cependant relativement technique, notamment au portant et vis-à-vis de tous les réglages possibles.
 
 ### Caractéristiques :
 

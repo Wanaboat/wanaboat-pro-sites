@@ -3,9 +3,9 @@ templateKey: boat-spec
 title: Laser Bug
 description: L'optimist moderne par Laser
 featuredImage: /img/laser-bug.jpg
-path: /bateaux/29er/
+path: /bateaux/laser-bug/
 modelID: 5dadfb6f884e0
-crew: Double
+crew: double
 brand: Ovington
 ---
 Le laser bug est un petit dériveur moderne destiné à l’initiation des plus jeunes (8/15 ans), Dessiné en 2008 par l’architecte de Laser Performance Jo Richard, avec l’ambition de détrôner l’optimist.

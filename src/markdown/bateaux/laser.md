@@ -2,8 +2,8 @@
 templateKey: boat-spec
 title: Laser
 description: Le Skiff des équipages légers
-featuredImage: /img/29er-skiff-double-trapèze-occasion-dériveur-services-10.jpg
-path: /bateaux/29er/
+featuredImage: /img/laser.jpg
+path: /bateaux/laser/
 modelID: 5dadfb6f884e0
 crew: solo
 brand: Ovington

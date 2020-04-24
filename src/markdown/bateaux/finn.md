@@ -2,16 +2,13 @@
 templateKey: boat-spec
 title: Finn
 description: Le Solo pour poids lourds
-featuredImage: /img/29er-skiff-double-trapèze-occasion-dériveur-services-10.jpg
+featuredImage: /img/solo.jpg
 path: /bateaux/finn/
 modelID: 5dadfb6f884e0
-crew: Double
+crew: solo
 brand: Ovington
 ---
-Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.
-
-Les bateaux sont durables, bien équipés et pleinement compétitifs tout de suite. Une grand-voile entièrement lattée, un foc est auto-vireur et un spi asymétrique, le 29er est de la dynamite pure.
-
+Si le Finn est dériveur olympique, ce n’est pas par hasard ! Ce bateau a été et reste depuis longtemps une référence parmi les solitaires. Le comportement du bateau, ses sensations de barres et la finesse des réglages ne ressemblent à aucun autre.
 
 ### Caractéristiques :
 

@@ -2,7 +2,7 @@
 templateKey: boat-spec
 title: Flying Fifteen
 description: Le Skiff des équipages légers
-featuredImage: /img/29er-skiff-double-trapèze-occasion-dériveur-services-10.jpg
+featuredImage: /img/flying-fifteen.jpg
 path: /bateaux/flying-fifteen/
 modelID: 5dadfb6f884e0
 crew: double

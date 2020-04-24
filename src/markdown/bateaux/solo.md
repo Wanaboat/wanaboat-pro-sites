@@ -1,11 +1,11 @@
 ---
 templateKey: boat-spec
-title: 29er
-description: Le Skiff des équipages légers
+title: Solo
+description: Le Solo autrement
 featuredImage: /img/solo.jpg
-path: /bateaux/29er/
+path: /bateaux/solo/
 modelID: 5dadfb6f884e0
-crew: Solo
+crew: solo
 brand: Ovington
 ---
 Le solo est un solitaire dessiné par Jack Holt, les caissons inclinés et large, son vaste cockpit et sa bôme haute en fond un bateau confortable.

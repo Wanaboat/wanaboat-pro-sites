@@ -3,9 +3,9 @@ templateKey: boat-spec
 title: Laser Vortex
 description: Mi Cata Mi Dériveurso
 featuredImage: /img/laser-vortex.jpg
-path: /bateaux/29er/
+path: /bateaux/laser-vortex/
 modelID: 5dadfb6f884e0
-crew: Solo
+crew: solo
 brand: Ovington
 ---
 Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.

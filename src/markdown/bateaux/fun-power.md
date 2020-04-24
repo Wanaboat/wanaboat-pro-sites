@@ -2,10 +2,10 @@
 templateKey: boat-spec
 title: Fun Power
 description: Le Skiff des équipages légers
-featuredImage: /img/fun-powerfun).jpg
-path: /bateaux/29er/
+featuredImage: /img/fun-power.jpg
+path: /bateaux/fun-power/
 modelID: 5dadfb6f884e0
-crew: Double
+crew: double
 brand: Ovington
 ---
 Le fun power est un dériveur solitaire à trapèze, GV latté, la carène est repris au moth europe, cockpit immense, bateau léger, accastillage simple.ristiques :

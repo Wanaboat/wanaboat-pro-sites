@@ -5,7 +5,7 @@ description: Le Skiff des équipages légers
 featuredImage: /img/byte.jpg
 path: /bateaux/byte/
 modelID: 5dadfb6f884e0
-crew: Solo
+crew: solo
 brand: Laser
 ---
 Dessiné par l’architecte du laser, le Byte en reprend l’aspect général, mais légèrement plus petit, et plus léger, au cockpit plus généreux.

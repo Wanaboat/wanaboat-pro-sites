@@ -5,6 +5,7 @@ modelID: 5dadfb6f884e0
 path: /bateaux/europe/
 description: Le dériveur solo élégant et racé
 featuredImage: /img/deriveur-europe.jpg
+crew: solo
 ---
 L’Europe est un solitaire pour gabarit léger, un classique de la voile légère, bateau fin offrant de bonnes sensations de planning.
 

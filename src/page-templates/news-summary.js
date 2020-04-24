@@ -51,7 +51,6 @@ export const NewsSummaryTemplate = ({
                 my={5}
                 maxW={"1000px"}
                 mx="auto"
-
             >
                 <NewsRoll />
             </Box>
