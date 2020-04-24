@@ -21,6 +21,8 @@ collections:
     folder: "src/markdown/actualites/"
     create: true
     slug: "actualites/{{slug}}-{{year}}.{{month}}.{{day}}"
+    editor:
+      preview: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -35,6 +37,8 @@ collections:
     folder: "src/markdown/bateaux/"
     create: true
     slug: "bateaux/{{slug}}"
+    editor:
+      preview: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "boat-spec"}
       - {label: "Title", name: "title", widget: "string"}

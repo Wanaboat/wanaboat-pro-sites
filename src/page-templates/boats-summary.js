@@ -9,63 +9,56 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
 import Img from "gatsby-image"
 import {
     Box,
-    Heading
+    Heading,
+    Stack
 } from "@chakra-ui/core"
+import BoatsRoll from "../components/BoatsRoll"
 
-import AdCardLandscape from "../components/AdCardLandscape"
-import AdsRoll from "../components/AdsRoll"
+// import BoatsRoll from "../components/AdsRoll"
 
 
-
-export const BoatSpecTemplate = ({
+export const BoatsSummaryTemplate = ({
     content,
     contentComponent,
     description,
-    featuredImage,
-    modelID,
     title,
     helmet,
 }) => {
     const PostContent = contentComponent || Content
     return (
-        <Box  as="section" maxW={"1000px"} mx="auto">
-            <Img fixed={featuredImage.childImageSharp.fixed} />
-            <Box
-                position="relative"
-                zIndex="popup"
-                w={"90%"}
-                p={10}
-                borderRadius="lg"
-                bg="white"
+        <>
+            <Stack
+                spacing={{ xs: 4, lg: 8 }}
+                as="section"
+                maxW={"1000px"}
+                py={{ xs: 5, lg: 20 }}
+                px={{ xs: 5, lg: 0 }}
                 mx="auto"
-                mt={"-80px"}>
+            >
                 {helmet || ""}
                 <Heading as="h1">{title}</Heading>
                 <Heading
                     as="h3"
                     color="gray.700"
-                    fontSize={{ xs: 16, lg: 22 }}
+                    fontSize={{ xs: 16, lg: 18 }}
                     textTransform="uppercase"
                     letterSpacing="0.35rem"
                 >{description}</Heading>
-                {/* <img src={ featuredImage } /> */}
-                {/* <Img fixed={featuredImage.fixed} /> */}
-                <Box my={5}>
-                    <PostContent content={content} />
+                <PostContent content={content} />
 
-                </Box>
-                <Heading
-                    as="h5"
-                    fontSize="16px"
-                >Nos occasions du moment:</Heading>
-
-                <AdsRoll modelID={modelID} />
+            </Stack>
+            <Box
+                my={5}
+                maxW={"1000px"}
+                mx="auto"
+            >
+                <BoatsRoll />
             </Box>
-        </Box>
+        </>
     )
 }
 
-BoatSpecTemplate.propTypes = {
+BoatsSummaryTemplate.propTypes = {
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
     description: PropTypes.string,
@@ -73,18 +66,15 @@ BoatSpecTemplate.propTypes = {
     helmet: PropTypes.object,
 }
 
-const BoatSpec = ({ data }) => {
+const BoatsSummary = ({ data }) => {
     const { markdownRemark: post } = data
-    // console.log( post.frontmatter.featuredImage.childImageSharp.fluid.src )
     return (
         <Layout>
-            <BoatSpecTemplate
+            <BoatsSummaryTemplate
                 title={post.frontmatter.title}
                 content={post.html}
                 contentComponent={HTMLContent}
                 description={post.frontmatter.description}
-                modelID={post.frontmatter.modelID}
-                featuredImage={post.frontmatter.featuredImage}
                 helmet={
                     <Helmet titleTemplate="%s | Blog">
                         <title>{`${post.frontmatter.title}`}</title>
@@ -99,31 +89,22 @@ const BoatSpec = ({ data }) => {
     )
 }
 
-BoatSpec.propTypes = {
+BoatsSummary.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
     }),
 }
 
-export default BoatSpec
+export default BoatsSummary
 
 export const pageQuery = graphql`
-  query BoatSpecByID($id: String!) {
+  query BoatsSummary($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        modelID
         description
-        featuredImage {
-          childImageSharp {
-            fixed(width: 1000, height: 600) {
-              ...GatsbyImageSharpFixed
-           }
-          }
-        }
       }
     }
   }
