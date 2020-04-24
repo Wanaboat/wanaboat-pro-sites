@@ -1,7 +1,8 @@
 ---
 templateKey: page
 title: Services
-path: /services/
+path: "services"
+description: "description"
 ---
 ## Entretien / révisions
 

@@ -1,7 +1,9 @@
 ---
+path: "materiel-neuf"
 templateKey: page
 title: Matériel neuf
-path: /materiel-neuf/
+description: "description"
+
 ---
 * **Accastillage**: poulies éco, poulies à billes, poulies winch, palans, réas, taquets, coinceurs , tourelles, emmagasineurs, filoirs, pontets, manilles, cadènes, crochets, mousquetons, rails et chariots, trappes de visite, bouchons de nable, vide-vite, cordages et bouts…
 * **Safrans et dérives**: sticks, rotules de sticks, têtes de safran, lames de safran, barres, aiguillots, femelots…

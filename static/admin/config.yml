@@ -34,7 +34,7 @@ collections:
     label: "Bateaux"
     folder: "src/markdown/bateaux/"
     create: true
-    slug: "bateaux/{{slug}}-{{year}}.{{month}}.{{day}}"
+    slug: "bateaux/{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "boat-spec"}
       - {label: "Title", name: "title", widget: "string"}
@@ -63,13 +63,13 @@ collections:
             name: "offers"
             widget: "list"
             fields:
-              - {label: Titre, name: title, widget: string, default: "Everything is awesome!"}
-              - {label: Text, name: text, widget: markdown, default: "Everything is awesome!"}
+              - {label: Titre, name: title, widget: string, default: "Titre"}
+              - {label: Text, name: text, widget: markdown, default: "Intro"}
               - {label: Image, name: image, widget: file}
               - {label: Bouton text, name: buttonLabel, widget: string}
               - {label: Bouton cible, name: buttonTarget, widget: string}
 
-      - file: "src/markdown/nous-trouver/index.md"
+      - file: "src/markdown/nous-trouver.md"
         label: "Nous trouver"
         name: "nous-trouver"
         fields:
@@ -79,7 +79,7 @@ collections:
           - {label: "Description", name: "description", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
-      - file: "src/markdown/services/index.md"
+      - file: "src/markdown/services.md"
         label: "Services"
         name: "services"
         fields:
@@ -88,7 +88,7 @@ collections:
           - {label: "URL", name: "path", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
-      - file: "src/markdown/materiel-neuf/index.md"
+      - file: "src/markdown/materiel-neuf.md"
         label: "Matériel neuf"
         name: "materiel-neuf"
         fields:
@@ -97,7 +97,7 @@ collections:
           - {label: "URL", name: "path", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           
-      - file: "src/markdown/bateaux/index.md"
+      - file: "src/markdown/bateaux.md"
         label: "Bateaux"
         name: "bateaux"
         fields:

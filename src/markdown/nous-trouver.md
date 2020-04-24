@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: Nous trouver
-path: /nous-trouver/
+path: "nous-trouver"
 description: Situé en Bretagne Nord, à Dinard près de Saint-Malo, le chantier est très accessible de toute la Bretagne, Nord et Sud mais également depuis la Normandie.
 ---
 

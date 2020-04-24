@@ -85,7 +85,7 @@ export const AboutPageTemplate = ({
         <Box
           maxWidth="900px"
           mx="auto"
-          my={{ xs:5, lg:20}}
+          my={{ xs:4, lg:0}}
           p={{ xs:4, lg:0}}
         >
           <PageContent content={content} />

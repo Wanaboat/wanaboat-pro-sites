@@ -1,7 +1,7 @@
 ---
 templateKey: page
 title: Les bateaux de voile légère
-path: /bateaux/
+path: bateaux
 modelId: 12345
 ---
 

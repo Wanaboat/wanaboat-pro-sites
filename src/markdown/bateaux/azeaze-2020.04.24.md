@@ -1,4 +1,5 @@
 ---
+path: "/bateaux/aezazeaz"
 templateKey: boat-spec
 title: azeaze
 modelID: azeaez
