@@ -48,10 +48,12 @@ class NewsRoll extends React.Component {
               <Box
                 display={{ xs:"none", lg:"initial"}}
               >
+                {post.frontmatter.featuredImage ? 
                 <picture>
-                <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
-                {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
-              </picture>
+                  <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
+                  {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
+                </picture>
+              :null}
               </Box>
               
               <Stack spacing={4} px={10} py={5}>

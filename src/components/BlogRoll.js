@@ -32,10 +32,12 @@ class BlogRoll extends React.Component {
               p={4}
               mb={{ xs:4, lg:0 }}
             >
-              <picture>
-                <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
-                {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
-              </picture>
+                {post.frontmatter.featuredImage ? 
+                <picture>
+                  <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
+                  {/* <Image borderRadius="5px" mr="10px" size="96px" loading="lazy" alt={post.frontmatter.title} src={post.frontmatter.featuredImage} /> */}
+                </picture>
+              :null}
               <Box pl="10px">
                 <Heading
                   as="h4"
