@@ -106,6 +106,7 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
 
           <img
             alt="Dériveur Services"
+            loading="lazy"
             style={{
             objectFit: "cover",
             width: "100%",

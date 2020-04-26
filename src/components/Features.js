@@ -42,7 +42,9 @@ const FeatureGrid = ({ gridItems }) => (
                 maxWidth: '450px'
               }}
             >
-              <Img style={{
+              <Img
+                loading="lazy"
+                style={{
                   width:'100%',
                   maxWidth: '450px',
                   zIndex:200,
