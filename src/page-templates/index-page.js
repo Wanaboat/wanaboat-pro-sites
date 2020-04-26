@@ -8,23 +8,20 @@ import Layout from "../components/Layout"
 import Features from "../components/Features"
 import BlogRoll from "../components/BlogRoll"
 // import AdsRoll from "../components/AdsRoll"
-import Img from "gatsby-image"
 
 import css from "./hero.module.scss";
 
 
-import HeroMobileWebp from "../images/hero-mobile.webp"
-import HeroMobileJpg from "../images/hero-mobile.jpg"
+// import HeroMobileWebp from "../images/hero-mobile.webp"
+// import HeroMobileJpg from "../images/hero-mobile.jpg"
 
-import HeroDesktopWebp from "../images/hero-desktop.webp"
+// import HeroDesktopWebp from "../images/hero-desktop.webp"
 import HeroDesktopJpg from "../images/hero-desktop.jpg"
 
 import {
   Box,
-  Button,
   Flex,
   Heading,
-  Image,
   Link,
   PseudoBox,
   SimpleGrid,
@@ -38,18 +35,18 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
       id="home-hero"
       bg="brand.dark1"
 
-      p={{ xs: 30, lg: 100 }}
+      p={{ xs: 30, lg: 70 }}
     >
-      <Stack spacing={{ xs: 6, lg: 10 }} maxW="600px">
+      <Stack spacing={{ xs: 6, lg: 10 }} maxW={{lg:"450px", xl:"650px", xxl:"700px"}}>
         <Box>
           <Heading
             as="h1"
-            fontSize={{ xs: 28, lg: 58 }}
+            fontSize={{ xs: 26, md:30, lg: 58 }}
             color="brand.light1"
           >{heading}</Heading>
           <Text
             color="white"
-            fontSize={{ xs: 16, lg: 22 }}
+            fontSize={{ xs: 16, md:18, lg: 22 }}
             textTransform="uppercase"
             letterSpacing="0.35rem"
           >
@@ -103,10 +100,13 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
         top={"103px"}
         w="500px"
         h="500px"
+        display={{ xs:"none", lg:"initial"}}
       >
         <picture className={css.headerIllu}>
 
-          <img style={{
+          <img
+            alt="Dériveur Services"
+            style={{
             objectFit: "cover",
             width: "100%",
             height: "100%"
@@ -115,26 +115,23 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
           <svg width="0" height="0">
             <defs>
               <clipPath id="headerIlluMask">
-                <path fillRule="evenodd" clipRule="evenodd" d="M157.631 0H527V238.232L293.808 372.866C200.302 426.852 80.7358 394.814 26.75 301.308C-27.2358 207.802 4.80177 88.2358 98.308 34.25L157.631 0Z" fill="#0042DA" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M207.132 0.12207L60.6676 146.587C-20.2226 227.478 -20.2226 358.626 60.6678 439.517C98.8814 477.73 148.311 497.892 198.36 500H215.905C265.954 497.892 315.384 477.73 353.598 439.517L353.898 439.216L499.203 293.911V292.192L498.891 291.88H499.203V0H207.295V0.28418L207.132 0.12207Z" fill="#FF0000"/>
               </clipPath>
             </defs>
           </svg>
         </picture>
         <Box
-                display={{ xs: "none", md: "block" }}
-                position="absolute"
-                top={12}
-                right={"0"}
-                zIndex={'base'}
-            >
-                <svg width="397" height="372" viewBox="0 0 397 372" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M396.475 0L108.608 0L97.7826 6.25C4.27643 60.2358 -27.7612 179.802 26.2247 273.308C80.2105 366.814 199.776 398.852 293.283 344.866L396.475 285.288V0Z" fill="#99FBF5"/>
-                </svg>
-
-            </Box>
-
+          display={{ xs: "none", md: "block" }}
+          position="absolute"
+          top={"9rem"}
+          right={"0"}
+          zIndex={'base'}
+        >
+          <svg width="321" height="321" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M132.979 0.0783409L38.9487 94.1088C-12.9829 146.04 -12.9829 230.238 38.9487 282.17C63.4829 306.704 95.2188 319.647 127.352 321H138.607C170.74 319.647 202.475 306.704 227.01 282.17L320.488 188.691V187.587L320.288 187.387H320.488V0H133.083V0.182537L132.979 0.0783409Z" fill="#99FBF5"/>
+          </svg>
+        </Box>
       </Box>
-
     </Box>
   )
 }
@@ -179,7 +176,7 @@ export const IndexPageTemplate = ({
         as="section"
         bg="#FAFAFA"
         justify="space-around"
-        p={10}
+        p={{ xs:4, lg:8 }}
         borderBottom="solid 1px"
         borderBottomColor="gray.100"
         flexWrap={{ xs: "wrap", lg: "nowrap" }}
@@ -201,8 +198,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(frontmatter);
-
   return (
     <Layout>
       <Seo title={frontmatter.title} description={frontmatter.description} />

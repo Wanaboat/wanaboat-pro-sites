@@ -90,13 +90,13 @@ class AdCardLandscape extends Component {
   }
 
   render() {
-    const { name, price, date, to, brand, region, images, publicationDate, isInIframe, openAction  } = this.props;
-    const cardClickHandle = (event) => {
-      let relatedLink = event.target.closest('.ad-card').querySelector('a');
-      if( !isInIframe ) {
-        relatedLink.click();
-      }
-    }
+    const { name, price, date, to, brand, images, publicationDate, isInIframe  } = this.props;
+    // const cardClickHandle = (event) => {
+    //   let relatedLink = event.target.closest('.ad-card').querySelector('a');
+    //   if( !isInIframe ) {
+    //     relatedLink.click();
+    //   }
+    // }
     return (
       <PseudoBox
         className="ad-card"
@@ -167,7 +167,6 @@ class AdCardLandscape extends Component {
                   pr={5}
                   pb={1}
                   mb={1}
-                  fontSize="base"
                   borderBottom="solid 1px"
                   borderBottomColor="gray.200"
                   fontSize="xs"
@@ -189,7 +188,6 @@ class AdCardLandscape extends Component {
                   pr={5}
                   pb={1}
                   mb={1}
-                  fontSize="base"
                   borderBottom="solid 1px"
                   borderBottomColor="gray.200"
                   fontSize="xs"

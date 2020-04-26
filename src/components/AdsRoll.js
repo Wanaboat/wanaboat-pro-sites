@@ -1,19 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link as GatsbyLink, graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import NumberFormat from "react-number-format";
+// import PreviewCompatibleImage from "./PreviewCompatibleImage";
+
 // import Excerpt from "../components/content/excerpt";
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import AdCardLandscape from "../components/AdCardLandscape"
 import {
   Box,
-  Heading,
-  Flex,
-  Link,
   Text,
-  Stack,
-  Spinner,
 } from "@chakra-ui/core"
 const contentful = require("contentful");
 const client = contentful.createClient({
@@ -22,7 +15,6 @@ const client = contentful.createClient({
   accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN
 });
 
-const slugify = require('slugify')
 
 class AdsRoll extends React.Component {
   constructor( props ){
@@ -68,13 +60,13 @@ class AdsRoll extends React.Component {
     const openAd = (id) => {
       this.setState({ 'adSingleID' : id })
     }
-    const closeAd = () => {
-      this.setState({ 'adSingleID' : null })
-    }
+    // const closeAd = () => {
+    //   this.setState({ 'adSingleID' : null })
+    // }
     
-  
     return (
       <Box>
+        {ads.length === 0 ? <Text>Pas d'occasion pour ce modèle actuellement.</Text> : null}
         {ads && !adSingleID ?
               ads.map((edge, i) =>
                 <AdCardLandscape

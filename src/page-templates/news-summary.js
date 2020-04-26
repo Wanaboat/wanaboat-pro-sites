@@ -1,21 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { kebabCase } from "lodash"
 import Helmet from "react-helmet"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Content, { HTMLContent } from "../components/Content"
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
-import Img from "gatsby-image"
+// import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
+// import Img from "gatsby-image"
 import {
     Box,
     Heading,
     Stack
 } from "@chakra-ui/core"
 import NewsRoll from "../components/NewsRoll"
-
-// import NewsRoll from "../components/AdsRoll"
-
 
 export const NewsSummaryTemplate = ({
     content,

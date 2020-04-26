@@ -10,10 +10,8 @@ import Seo from "../components/Head.js"
 import {
   Box,
   Heading,
-  Button,
-  Flex,
   Stack,
-  Link } from "@chakra-ui/core";
+  } from "@chakra-ui/core";
 
 export const AboutPageTemplate = ({
   title,

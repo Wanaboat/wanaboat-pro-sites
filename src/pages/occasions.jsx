@@ -1,5 +1,4 @@
 import React from "react"
-import { AdsRoll } from "../components/"
 import {
   Box,
   Heading,

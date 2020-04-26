@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link as GatsbyLink, graphql, StaticQuery } from "gatsby"
-import PreviewCompatibleImage from "./PreviewCompatibleImage"
+// import PreviewCompatibleImage from "./PreviewCompatibleImage"
 import Img from "gatsby-image"
 
 import {
@@ -10,7 +10,6 @@ import {
   Link,
   Text,
   Heading,
-  Image,
   PseudoBox,
   Stack
 } from "@chakra-ui/core";
@@ -29,8 +28,6 @@ class NewsRoll extends React.Component {
               templateColumns={{ xs:"100%", lg:"15% 250px calc( 100% - 15% - 250px ) "}}
               key={post.id}
               w={{ xs:"100%"}}
-              mb={{ xs:4, lg:0 }}
-              mb={0}
               borderTop="solid 1px"
               borderTopColor="gray.100"
               h={{ xs:"auto", lg:"200px"}}

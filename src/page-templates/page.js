@@ -6,14 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 
 import {
   Box,
-  Button,
-  Flex,
   Heading,
-  Image,
-  Link,
-  SimpleGrid,
-  Text,
-  Stack
 } from "@chakra-ui/core";
 
 export const PageTemplate = ({ title, content, description, contentComponent }) => {
@@ -23,9 +16,9 @@ export const PageTemplate = ({ title, content, description, contentComponent }) 
     <Box
       maxW={"900px"}
       mx="auto"
-      p={{ xs:2, lg:10}}
+      p={{ xs:6, lg:10}}
     >
-      <Heading as="h1">{title}</Heading>
+      <Heading mb={4} as="h1">{title}</Heading>
       { (description) ? <Heading as="h2">{description}</Heading> : null }
       <PageContent content={content} />
     </Box>

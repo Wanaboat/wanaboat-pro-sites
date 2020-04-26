@@ -15,7 +15,6 @@ import {
     Heading,
     Box,
     Flex,
-    Image,
     Text,
     Button,
     Link,
@@ -45,7 +44,7 @@ export default class AdCardPortraitLarge extends React.Component {
         };
     }
     componentDidMount() {
-        const {id, context} = this.state;
+        const { context} = this.state;
         var _this = this;
         client.getEntry(this.state.id).then(function(entry) {
             console.log( entry );
@@ -59,7 +58,6 @@ export default class AdCardPortraitLarge extends React.Component {
 
     render() {
         const { ad, isLoading, isViewingPictures } = this.state;
-        const { context } = this.state;
         const Carousel = () => {
             let reactSwipeEl;
 
@@ -188,8 +186,6 @@ export default class AdCardPortraitLarge extends React.Component {
                 </Box>
             );
         };
-
-        const Bold = ({ children }) => <span className="bold">{children}</span>;
 
         const CustomP = ({ children }) => <Text mb={1}>{children}</Text>;
 

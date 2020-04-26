@@ -1,21 +1,8 @@
 // import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Box, Flex, Text } from "@chakra-ui/core";
-
-import HamburgerMenu from "react-hamburger-button";
-
+import { Flex, Text } from "@chakra-ui/core";
 import Menu from './menu.component.js'
-
-const Burger = () => {
-  return(
-    <Flex display={{ xs:"flex", lg:"none"}} py="10px" px="15px" w="60px" flexWrap="wrap" h="50px" alignItems="center" justifyContent="space-around">
-      <Box borderRadius="2px" backgroundColor="brand.light1" w="100%" height="3px" />
-      <Box borderRadius="2px" backgroundColor="brand.light1" w="100%" height="3px" />
-      <Box borderRadius="2px" backgroundColor="brand.light1" w="100%" height="3px" />
-    </Flex>
-  )
-}
 
 export const Header = ({ siteTitle }) => (
   <Flex
@@ -32,7 +19,6 @@ export const Header = ({ siteTitle }) => (
   >
     <Text color="brand.light1" fontWeight="bold" pl={2} display={{ xs:"initial", lg:"none"}}>Dériveurs Services</Text>
     <Menu />
-    <Burger />
   </Flex>
 )
 
