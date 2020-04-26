@@ -1,25 +1,22 @@
 ---
 templateKey: boat-spec
 title: Laser
-description: Le Skiff des équipages légers
+description: Le dériveur solitaire olympique
 featuredImage: /img/laser.jpg
 path: /bateaux/laser/
-modelID: 5dadfb6f884e0
+modelID: 5dadfb9caee3b
 crew: solo
-brand: Ovington
+brand: Laser
 ---
-Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.
+Le Laser a été dessiné en 1970 en version standard, puis dans le milieu des années 80 une voile plus petite (le radial) fut proposée pour rendre le bateau plus facile. Le Laser est un dériveur solitaire. Ce monotype de régate est très largement répandu en France comme à l’étranger.
 
-Les bateaux sont durables, bien équipés et pleinement compétitifs tout de suite. Une grand-voile entièrement lattée, un foc est auto-vireur et un spi asymétrique, le 29er est de la dynamite pure.
-
+Très simple d’utilisation il convient aussi bien à l’initiation qu’à la régate. Avec ses trois gréements différents, le laser peut s’adapter à des gabarits très variés.
 
 ### Caractéristiques :
 
 |     |     |
 | --- | --- |
-| Longueur | 4,40m  |
-| Largeur | 1,70 m |
-| Largeur | 1,70 m |
-| Grand-voile | 7,75 m²|
-| Foc | 3,4 m² |
-| Spi | 15,48 m² |
+| Longueur | 4,23m  |
+| Largeur | 1,42 m |
+| Poids | 59 m |
+| Grand-voile | 7,06 / 5,7 / 4,7 m²|

@@ -4,22 +4,10 @@ title: Laser Vortex
 description: Mi Cata Mi Dériveurso
 featuredImage: /img/laser-vortex.jpg
 path: /bateaux/laser-vortex/
-modelID: 5dadfb6f884e0
+modelID: 2f5R42v4Rmr48TkNIJMJMV
 crew: solo
-brand: Ovington
+brand: Laser
 ---
-Le 29er est le petit frère du 49er, le célèbre skiff olympique. Le 29er n’en est pas moins un véritable skiff en simple trapèze avec un spinnaker asymétrique et une coque légère. Il a été conçu par la légende australienne des skiffs Julian Bethwaite.
+Le Vortex est un dériveur solitaire avec une carène à tunnel, puissant et à trapèze. Sa forme, pour le moins inhabituelle, a été dessinée par Jo Richards. Elle rend le Vortex relativement stable, ce qui permet de gérer la puissance de la grand-voile sans augmenter de manière trop importante la surface mouillée du bateau.
 
-Les bateaux sont durables, bien équipés et pleinement compétitifs tout de suite. Une grand-voile entièrement lattée, un foc est auto-vireur et un spi asymétrique, le 29er est de la dynamite pure.
-
-
-### Caractéristiques :
-
-|     |     |
-| --- | --- |
-| Longueur | 4,40m  |
-| Largeur | 1,70 m |
-| Largeur | 1,70 m |
-| Grand-voile | 7,75 m²|
-| Foc | 3,4 m² |
-| Spi | 15,48 m² |
+C’est un bateau qui séduira par sa forme atypique, les sensations qu’il procure, le trapèze à pleine vitesse, sans pour autant être d’une inatteignable technicité.

@@ -10,6 +10,9 @@ import BlogRoll from "../components/BlogRoll"
 // import AdsRoll from "../components/AdsRoll"
 import Img from "gatsby-image"
 
+import css from "./hero.module.scss";
+
+
 import HeroMobileWebp from "../images/hero-mobile.webp"
 import HeroMobileJpg from "../images/hero-mobile.jpg"
 
@@ -34,9 +37,10 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
     <Box
       id="home-hero"
       bg="brand.dark1"
+
       p={{ xs: 30, lg: 100 }}
     >
-      <Stack spacing={{ xs:6, lg:10}} maxW="750px">
+      <Stack spacing={{ xs: 6, lg: 10 }} maxW="600px">
         <Box>
           <Heading
             as="h1"
@@ -52,7 +56,7 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
             {subheading}
           </Text>
         </Box>
-        
+
         <Text
           fontSize={{ xs: 14, lg: 18 }}
           color="white"
@@ -61,10 +65,10 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
         </Text>
 
         <Box>
-          <Text fontSize={{ xs:12, md:24}} fontWeight="bold" color="white" mb={4}>Accès et contact :</Text>
+          <Text fontSize={{ xs: 12, md: 24 }} fontWeight="bold" color="white" mb={4}>Accès et contact :</Text>
           <SimpleGrid
             fontSize={{ xs: 12, lg: 18 }}
-            color="white" columns={{xs:1, lg:2}}>
+            color="white" columns={{ xs: 1, lg: 2 }}>
             <Text>
               {address}
               <br />
@@ -92,6 +96,45 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
           </SimpleGrid>
         </Box>
       </Stack>
+
+      <Box
+        position="absolute"
+        right={0}
+        top={"103px"}
+        w="500px"
+        h="500px"
+      >
+        <picture className={css.headerIllu}>
+
+          <img style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%"
+          }} src={HeroDesktopJpg} />
+
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="headerIlluMask">
+                <path fillRule="evenodd" clipRule="evenodd" d="M157.631 0H527V238.232L293.808 372.866C200.302 426.852 80.7358 394.814 26.75 301.308C-27.2358 207.802 4.80177 88.2358 98.308 34.25L157.631 0Z" fill="#0042DA" />
+              </clipPath>
+            </defs>
+          </svg>
+        </picture>
+        <Box
+                display={{ xs: "none", md: "block" }}
+                position="absolute"
+                top={12}
+                right={"0"}
+                zIndex={'base'}
+            >
+                <svg width="397" height="372" viewBox="0 0 397 372" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M396.475 0L108.608 0L97.7826 6.25C4.27643 60.2358 -27.7612 179.802 26.2247 273.308C80.2105 366.814 199.776 398.852 293.283 344.866L396.475 285.288V0Z" fill="#99FBF5"/>
+                </svg>
+
+            </Box>
+
+      </Box>
+
     </Box>
   )
 }
@@ -139,7 +182,7 @@ export const IndexPageTemplate = ({
         p={10}
         borderBottom="solid 1px"
         borderBottomColor="gray.100"
-        flexWrap={{ xs:"wrap", lg:"nowrap"} }
+        flexWrap={{ xs: "wrap", lg: "nowrap" }}
       >
         <BlogRoll />
       </Flex>
@@ -158,7 +201,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log( frontmatter );
+  console.log(frontmatter);
 
   return (
     <Layout>

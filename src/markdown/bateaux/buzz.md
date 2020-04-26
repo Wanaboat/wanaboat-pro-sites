@@ -4,8 +4,8 @@ title: Buzz
 description: Le skiff accessible
 featuredImage: /img/buzz.jpg
 path: /bateaux/buzz/
-modelID: 5dadfb6f884e0
-crew: Double
+modelID: 5dadfb7c52062
+crew: double
 brand: Topper
 ---
 Dessiné par l’architecte du laser, le Byte en reprend l’aspect général, mais légèrement plus petit, et plus léger, au cockpit plus généreux.

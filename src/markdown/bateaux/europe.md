@@ -1,7 +1,7 @@
 ---
 templateKey: boat-spec
 title: Europe
-modelID: 5dadfb6f884e0
+modelID: 5dadfb8cb6267
 path: /bateaux/europe/
 description: Le dériveur solo élégant et racé
 featuredImage: /img/deriveur-europe.jpg

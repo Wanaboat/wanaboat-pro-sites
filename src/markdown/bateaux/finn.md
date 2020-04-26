@@ -1,12 +1,11 @@
 ---
 templateKey: boat-spec
 title: Finn
-description: Le Solo pour poids lourds
+description: Le Solo pour grand gabarit
 featuredImage: /img/solo.jpg
 path: /bateaux/finn/
-modelID: 5dadfb6f884e0
+modelID: 5dadfb5ddd44b
 crew: solo
-brand: Ovington
 ---
 Si le Finn est dériveur olympique, ce n’est pas par hasard ! Ce bateau a été et reste depuis longtemps une référence parmi les solitaires. Le comportement du bateau, ses sensations de barres et la finesse des réglages ne ressemblent à aucun autre.
 
@@ -14,9 +13,7 @@ Si le Finn est dériveur olympique, ce n’est pas par hasard ! Ce bateau a ét�
 
 |     |     |
 | --- | --- |
-| Longueur | 4,40m  |
-| Largeur | 1,70 m |
-| Largeur | 1,70 m |
-| Grand-voile | 7,75 m²|
-| Foc | 3,4 m² |
-| Spi | 15,48 m² |
+| Longueur | 4,50m  |
+| Largeur | 1,47 m |
+| Poids | 116 kg |
+| Grand-voile | 10,6 m²|
