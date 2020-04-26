@@ -30,8 +30,8 @@ export const BoatsSummaryTemplate = ({
                 spacing={{ xs: 4, lg: 8 }}
                 as="section"
                 maxW={"1000px"}
-                py={{ xs: 5, lg: 20 }}
-                px={{ xs: 5, lg: 0 }}
+                px={{ xs:"2rem", lg:"5rem" }}
+                py={{ xs:"2rem", lg:"5rem" }}
                 mx="auto"
             >
                 {helmet || ""}
@@ -47,7 +47,7 @@ export const BoatsSummaryTemplate = ({
 
             </Stack>
             <Box
-                my={5}
+                px={{ xs:"2rem", lg:"5rem" }}
                 maxW={"1000px"}
                 mx="auto"
             >

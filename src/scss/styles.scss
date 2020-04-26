@@ -1,35 +1,35 @@
-@charset "utf-8";
-
-/* overpass-regular - latin */
 @font-face {
-font-family: 'Overpass';
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-src: local('Overpass Regular'), local('Overpass-Regular'),
-        url('../fonts/overpass-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/overpass-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* overpass-600 - latin */
-@font-face {
-font-family: 'Overpass';
-font-style: normal;
-font-weight: 600;
-font-display: swap;
-src: local('Overpass SemiBold'), local('Overpass-SemiBold'),
-        url('../fonts/overpass-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/overpass-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* overpass-700 - latin */
-@font-face {
-font-family: 'Overpass';
-font-style: normal;
-font-weight: 700;
-font-display: swap;
-src: local('Overpass Bold'), local('Overpass-Bold'),
-        url('../fonts/overpass-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/overpass-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Apercu Pro';
+    font-display: swap;
+    src: url('../fonts/ApercuPro-Bold.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
-$family-primary:'Overpass';
-$family-sans-serif:'Overpass';
+@font-face {
+    font-family: 'Apercu Pro';
+    font-display: swap;
+    src: url('../fonts/ApercuPro-Medium.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    font-display: swap;
+    src: url('../fonts/ApercuPro-Light.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    font-display: swap;
+    src: url('../fonts/ApercuPro-Regular.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

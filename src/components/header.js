@@ -1,8 +1,9 @@
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Flex, Text } from "@chakra-ui/core";
+import { Flex, Box } from "@chakra-ui/core"
 import Menu from './menu.component.js'
+import logo from '../images/logo.svg'
 
 export const Header = ({ siteTitle }) => (
   <Flex
@@ -17,7 +18,11 @@ export const Header = ({ siteTitle }) => (
     position={{xs:"fixed", lg:"initial"}}
     zIndex="modal"
   >
-    <Text color="brand.light1" fontWeight="bold" pl={2} display={{ xs:"initial", lg:"none"}}>Dériveurs Services</Text>
+    <Box w={"160px"} color="brand.light1" fontWeight="bold" pl={2} display={{ xs:"initial", lg:"none"}}>
+        <Link to="/">
+            <img src={logo} alt={siteTitle} />
+        </Link>
+    </Box>
     <Menu />
   </Flex>
 )

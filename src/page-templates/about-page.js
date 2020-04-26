@@ -34,7 +34,8 @@ export const AboutPageTemplate = ({
           maxWidth="900px"
           mx="auto"
           my={{ xs:4, lg:20}}
-          p={{ xs:4, lg:0}}
+          px={{ xs:"2rem", lg:"5rem" }}
+          py={{ xs:"2rem", lg:"2rem" }}
         >
           <Heading as="h1">{title}</Heading>
           <Heading
@@ -71,10 +72,10 @@ export const AboutPageTemplate = ({
                   lng: -2.07034,
                 }}
                 id={1}
-                label="Dériveurs Services"
+                label="Dériveur Service"
                 label-color="white"
                 labelStyle={{ size: "10px" }}
-                title="Dériveurs Services"
+                title="Dériveur Service"
                 clickable={true}
               />
             </GoogleMap>
@@ -83,8 +84,8 @@ export const AboutPageTemplate = ({
         <Box
           maxWidth="900px"
           mx="auto"
-          my={{ xs:4, lg:0}}
-          p={{ xs:4, lg:0}}
+          px={{ xs:"2rem", lg:"5rem" }}
+          py={{ xs:"2rem", lg:"5rem" }}
         >
           <PageContent content={content} />
         </Box>

@@ -2,7 +2,7 @@
 templateKey: index-page
 path: /
 alertBanner: Nous restons ouverts pendant le confinement
-heading: Dériveurs Services
+heading: Dériveur Service
 subheading: Spécialiste voile légère en Bretagne
 chapo: >-
   Chantier, atelier, vente neuf et occasion, dériveur service propose tous les

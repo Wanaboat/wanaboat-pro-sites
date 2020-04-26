@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -16,7 +17,8 @@ export const PageTemplate = ({ title, content, description, contentComponent }) 
     <Box
       maxW={"900px"}
       mx="auto"
-      p={{ xs:6, lg:10}}
+      px={{ xs:"2rem", lg:"5rem" }}
+      py={{ xs:"2rem", lg:"5rem" }}
     >
       <Heading mb={4} as="h1">{title}</Heading>
       { (description) ? <Heading as="h2">{description}</Heading> : null }
@@ -36,6 +38,13 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet titleTemplate="%s | Dériveur Services">
+        <title>{`${post.frontmatter.title}`}</title>
+        <meta
+          name="description"
+          content={`${post.frontmatter.description}`}
+        />
+      </Helmet>
       <PageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

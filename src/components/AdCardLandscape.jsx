@@ -161,7 +161,7 @@ class AdCardLandscape extends Component {
                 </Box>
               </Box>
               <Box
-                display={{ xs: 'none', md: 'initial' }}
+                display={{ md: 'initial' }}
                 w={{ xs: '50%', md: "25%" }}>
                 <Text
                   pr={5}

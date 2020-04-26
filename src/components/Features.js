@@ -16,8 +16,9 @@ import {
 
 const FeatureGrid = ({ gridItems }) => (
   <Box>
-    {gridItems.map(item => (
+    {gridItems.map((item , index) => (
       <SimpleGrid
+      key={`feature${index}`}
         borderBottom="solid 1px"
         borderBottomColor="gray.100"
         columns={{ xs: 1, lg: 2 }}>
