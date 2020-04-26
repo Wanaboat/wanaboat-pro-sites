@@ -66,7 +66,7 @@ class AdsRoll extends React.Component {
     
     return (
       <Box>
-        {ads.length === 0 ? <Text>Pas d'occasion pour ce modèle actuellement.</Text> : null}
+        { !ads ? <Text>Pas d'occasion pour ce modèle actuellement.</Text> : null}
         {ads && !adSingleID ?
               ads.map((edge, i) =>
                 <AdCardLandscape
