@@ -99,7 +99,7 @@ export default class AdsIndexPage extends React.Component {
           <Heading as="h1">Nos bateaux d'occasion</Heading>
           <Text>
             Nous avons un grand stock d'occasion & dériveurs en particulier.
-            Dériveur Service proposent également la reprise et un service
+            Dériveur Services proposent également la reprise et un service
             d'achat/vente.
           </Text>
           <Box as="section">
@@ -173,7 +173,7 @@ export default class AdsIndexPage extends React.Component {
             textAlign="center"
             color="gray.500"
             fontSize={13}
-          >Les annonces d'occasion Dériveur Service sont carénnées par Wanaboat.fr, <Link isExternal={true} target="_blank" href="https://www.wanaboat.fr/">la référence du bateaux d'occasion</Link>.</Text>
+          >Les annonces d'occasion Dériveur Services sont carénnées par Wanaboat.fr, <Link isExternal={true} target="_blank" href="https://www.wanaboat.fr/">la référence du bateaux d'occasion</Link>.</Text>
         </Stack>
 
       </Layout>

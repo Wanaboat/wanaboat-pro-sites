@@ -35,12 +35,13 @@ collections:
     label: "Bateaux"
     folder: "src/markdown/bateaux/"
     create: true
-    slug: "bateaux/{{slug}}"
+    slug: "bateaux/{{path}}"
     editor:
       preview: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "boat-spec"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
       - {label: "Wanaboat ID", name: "modelID", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredImage", widget: image}

@@ -2,10 +2,10 @@
 templateKey: index-page
 path: /
 alertBanner: Nous restons ouverts pendant le confinement
-heading: Dériveur Service
+heading: Dériveur Services
 subheading: Spécialiste voile légère en Bretagne
 chapo: >-
-  Chantier, atelier, vente neuf et occasion, dériveur service propose tous les
+  Chantier, atelier, vente neuf et occasion, dériveur services propose tous les
   services dont vous avez besoin pour naviguez facilement sans problème. Nous
   proposons tout pour vos bateaux de voile légère, de l’achat, la mise au point
   jusqu’à l’hivernage et la revente.
