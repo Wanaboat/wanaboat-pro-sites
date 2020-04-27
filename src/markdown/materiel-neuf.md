@@ -1,21 +1,21 @@
 ---
-path: "materiel-neuf"
 templateKey: page
 title: Matériel neuf
-description: "description"
-
+path: materiel-neuf
 ---
+### Type de matériel que nous proposons et pour lequel nous avons du stock :
+
 * **Accastillage**: poulies éco, poulies à billes, poulies winch, palans, réas, taquets, coinceurs , tourelles, emmagasineurs, filoirs, pontets, manilles, cadènes, crochets, mousquetons, rails et chariots, trappes de visite, bouchons de nable, vide-vite, cordages et bouts…
 * **Safrans et dérives**: sticks, rotules de sticks, têtes de safran, lames de safran, barres, aiguillots, femelots…
-* ### **Gréements**: mâts, bômes, tangons, lattes ridoirs, barres de flêches, pieds de mât, têtes de mât, réas, étais, haubans, drisses câble, vits de mulet, palans de trapèze…
+* **Gréements**: mâts, bômes, tangons, lattes ridoirs, barres de flêches, pieds de mât, têtes de mât, réas, étais, haubans, drisses câble, vits de mulet, palans de trapèze…
 * Lèvres de puits de dérive
 * Bailles à spi
 * Réserves de flottabilité
 * Sangles de rappel
 * Antidérapants
-* Voiles:lattes, penons, numéros de voile…
+* Voiles: lattes, penons, numéros de voile…
 * Equipement de sécurité: Gilets, flash lights, bout de remorquage, écopes, échelles, mouillages, pagaies…
-* Accessoires: bidons étanches, démanilleurs, ceintures de trapèze, bailles à bouts, vides-poches,girouettes…
+* Accessoires: bidons étanches, démanilleurs, ceintures de trapèze, bailles à bouts, vides-poches, girouettes…
 
 ### Marques distribuées :
 
@@ -46,12 +46,12 @@ Nous pouvons aussi intervenir pour les adaptations et travaux d’entretien sur 
 
 *Tauds respirant*: spécialement recommandés pour les bateaux avec un pont en bois vernis, ou peint.
 
-## Plusieurs formes de tauds
+### Plusieurs formes de tauds
 
-### Taud de dessus plat :
+#### Taud de dessus plat :
 
 Facile à installer et peut être utilisé bateau mâté ou non. L’anneau de fixation de la drisse de grand-voile aide à ce que l’eau s’évacue du taud et ne fasse pas de poche.
 
-### Taud par dessus la bôme :
+#### Taud par dessus la bôme :
 
 La protection ultime à l’épreuve des intempéries .Il passe par dessus la bôme du bateau, et évite la formation de poches d’eau et permet à l’air de circuler.
