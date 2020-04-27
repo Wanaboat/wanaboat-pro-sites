@@ -94,8 +94,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://inspiring-ritchie-84dfb2.netlify.com/',
-        sitemap: 'https://inspiring-ritchie-84dfb2.netlify.com/sitemap.xml',
+        host: 'https://deriveurs-services.wanaboat.fr',
+        sitemap: 'https://deriveurs-services.wanaboat.fr/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

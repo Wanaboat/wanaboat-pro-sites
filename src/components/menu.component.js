@@ -3,7 +3,9 @@ import { Link as GatsbyLink } from "gatsby"
 import {
   Icon,
   Flex,
-  Link } from "@chakra-ui/core";
+  Link,
+  Text
+} from "@chakra-ui/core";
 
 // import logo from "../images/logo.svg"
 
@@ -104,13 +106,16 @@ class Menu extends Component {
           border="none"
           p={2}
           justifyContent="space-between"
+          aria-label="Menu"
           onClick={ () => { this.setState({navIsOpen: !navIsOpen} )}}
         >
             <Icon
               name={navIsOpen ? "menuClose" : "menu" }
               size="38px"
               color="white"
+
             />
+            <Text display={{xs:"none"}}>Menu</Text>
         </Flex>
       </Flex>
     )
