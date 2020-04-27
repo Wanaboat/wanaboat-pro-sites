@@ -84,7 +84,7 @@ class BoatsRoll extends React.Component {
               :null}
               </Box>
               
-              <Stack spacing={4} px={10} py={5}>
+              <Stack spacing={4} px={{xs:0, lg:10}} py={5}>
                 <Heading
                   as="h3"
                   textTransform="uppercase"

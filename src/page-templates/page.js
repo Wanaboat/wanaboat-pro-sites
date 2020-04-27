@@ -17,11 +17,11 @@ export const PageTemplate = ({ title, content, description, contentComponent }) 
     <Box
       maxW={"900px"}
       mx="auto"
-      px={{ xs:"2rem", lg:"5rem" }}
-      py={{ xs:"2rem", lg:"5rem" }}
+      px={{ xs: "1.5rem", lg: "5rem" }}
+      py={{ xs: "2rem", lg: "5rem" }}
     >
       <Heading mb={4} as="h1">{title}</Heading>
-      { (description) ? <Heading as="h2">{description}</Heading> : null }
+      { (description) ? <Heading as="h2" fontSize="14px">{description}</Heading> : null }
       <PageContent content={content} />
     </Box>
   )

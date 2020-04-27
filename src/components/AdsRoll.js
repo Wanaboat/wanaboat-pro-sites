@@ -4,9 +4,12 @@ import React from "react";
 // import Excerpt from "../components/content/excerpt";
 // import Img from "gatsby-image"
 import AdCardLandscape from "../components/AdCardLandscape"
+import AdCardPortraitLarge from "../components/AdCardPortraitLarge"
 import {
   Box,
+  Heading,
   Text,
+  Flex
 } from "@chakra-ui/core"
 const contentful = require("contentful");
 const client = contentful.createClient({
@@ -17,17 +20,18 @@ const client = contentful.createClient({
 
 
 class AdsRoll extends React.Component {
-  constructor( props ){
-    super( props );
-    this.state={
+  constructor(props) {
+    super(props);
+    this.state = {
       ads: null,
-      modelID: this.props.modelID
+      modelID: this.props.modelID,
+      adSingleID: null
     }
   }
 
   componentDidMount() {
     const { modelID } = this.state;
-    console.log( 'modelID', modelID)
+    console.log('modelID', modelID)
     let _this = this;
     let query = {
       content_type: "ad",
@@ -43,7 +47,7 @@ class AdsRoll extends React.Component {
     });
   }
 
-  render(  ) {
+  render() {
     const { ads, adSingleID, isLoading } = this.state
     const FullDate = (props) => {
       const date = new Date(props.date);
@@ -57,37 +61,67 @@ class AdsRoll extends React.Component {
         date.getFullYear()
       )
     }
+    const closeAd = () => {
+      this.setState({ 'adSingleID': null })
+    }
     const openAd = (id) => {
-      this.setState({ 'adSingleID' : id })
+      console.log('open ad');
+      this.setState({ 'adSingleID': id })
     }
     // const closeAd = () => {
     //   this.setState({ 'adSingleID' : null })
     // }
-    
+
     return (
       <Box>
-        { !ads ? <Text>Pas d'occasion pour ce modèle actuellement.</Text> : null}
-        {ads && !adSingleID ?
-              ads.map((edge, i) =>
-                <AdCardLandscape
-                  openAction={ () => { openAd(edge.sys.id) } }
-                  key={edge.sys.id}
-                  isInIframe={true}
-                  to={edge.fields.slug}
-                  name={edge.fields.name}
-                  price={edge.fields.price}
-                  brand={(edge.fields.refBrand) ? edge.fields.refBrand.name : null}
-                  date={edge.fields.date ? <DateYear date={edge.fields.date} /> : '-'}
-                  place={edge.fields.department}
-                  region={edge.fields.department}
-                  images={edge.fields.images}
-                  publicationDate={<FullDate date={edge.fields.publicationDate} />}
-                />)
-              : null}
+        {!ads ? <Text>Pas d'occasion pour ce modèle actuellement.</Text> : null}
 
-            { !isLoading && !ads === 0  ?
-              <Text>Pas d'occasion de ce bateau actuellement.</Text>
-            : null}
+        {adSingleID ?
+            <Flex justify="center">
+              <AdCardPortraitLarge
+                id={adSingleID}
+                backAction={closeAd}
+                context="export-whitelabel"
+              />
+            </Flex>
+          : null}
+
+
+        {ads && !adSingleID ?
+          <Box
+            maxW={"1000px"}
+            px={{ xs:"2rem", lg:"4rem" }}
+            mx="auto"
+          >
+            <Heading
+              as="h5"
+              fontSize="16px"
+              mb={2}
+            >
+              Nos occasions du moment:
+          </Heading>
+
+         
+            {ads.map((edge, i) =>
+              <AdCardLandscape
+                openAction={() => { openAd(edge.sys.id) }}
+                key={edge.sys.id}
+                isInIframe={true}
+                to={edge.fields.slug}
+                name={edge.fields.name}
+                price={edge.fields.price}
+                brand={(edge.fields.refBrand) ? edge.fields.refBrand.name : null}
+                date={edge.fields.date ? <DateYear date={edge.fields.date} /> : '-'}
+                place={edge.fields.department}
+                region={edge.fields.department}
+                images={edge.fields.images}
+                publicationDate={<FullDate date={edge.fields.publicationDate} />}
+              />)}
+          </Box>
+          : null}
+        {!isLoading && !ads === 0 ?
+          <Text>Pas d'occasion de ce bateau actuellement.</Text>
+          : null}
       </Box>
     );
   }

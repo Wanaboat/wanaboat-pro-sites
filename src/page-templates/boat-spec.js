@@ -13,6 +13,7 @@ import {
 
 import AdsRoll from "../components/AdsRoll"
 
+
 export const BoatSpecTemplate = ({
     content,
     contentComponent,
@@ -24,17 +25,17 @@ export const BoatSpecTemplate = ({
 }) => {
     const PostContent = contentComponent || Content
     return (
-        <Box  as="section" maxW={"1000px"} mx="auto">
-            <Img fixed={featuredImage.childImageSharp.fixed} />
+        <Box  as="section" maxW={"1280px"} mx="auto">
+            <Img fluid={featuredImage.childImageSharp.fluid} />
             <Box
                 position="relative"
                 zIndex="popup"
-                w={"90%"}
-                p={10}
-                borderRadius="lg"
+                w={{ xs:"100%", lg:"90%", xl:"75%" }}
+                p={{ xs:5, lg:10 }}
+                borderRadius={{ xs:0, lg:"10px" }}
                 bg="white"
                 mx="auto"
-                mt={"-80px"}>
+                mt={{ xs:"-30px", lg:"-80px", xl:"-140px"}}>
                 {helmet || ""}
                 <Heading as="h1">{title}</Heading>
                 <Heading
@@ -44,17 +45,12 @@ export const BoatSpecTemplate = ({
                     textTransform="uppercase"
                     letterSpacing="0.35rem"
                 >{description}</Heading>
-                {/* <img src={ featuredImage } /> */}
-                {/* <Img fixed={featuredImage.fixed} /> */}
                 <Box my={5}>
                     <PostContent content={content} />
-
                 </Box>
-                <Heading
-                    as="h5"
-                    fontSize="16px"
-                >Nos occasions du moment:</Heading>
-
+                
+            </Box>
+            <Box p={{ xs:2 }}>
                 <AdsRoll modelID={modelID} />
             </Box>
         </Box>
@@ -115,8 +111,8 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fixed(width: 1000, height: 600) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 1280, maxHeight: 600) {
+              ...GatsbyImageSharpFluid
            }
           }
         }

@@ -83,7 +83,7 @@ export default class AdsIndexPage extends React.Component {
         isLoading: true,
         adSingleID: null,
         ads: null
-       });
+      });
       setTimeout(() => { this.getAds(); }, 500);
 
     }
@@ -92,8 +92,8 @@ export default class AdsIndexPage extends React.Component {
         <Stack
           spacing={5}
           maxW={"1000px"}
-          px={{ xs:"2rem", lg:"5rem" }}
-          py={{ xs:"2rem", lg:"5rem" }}
+          px={{ xs: "1.5rem", lg: "5rem" }}
+          py={{ xs: "2rem", lg: "5rem" }}
           mx="auto"
         >
           <Heading as="h1">Nos bateaux d'occasion</Heading>
@@ -104,8 +104,13 @@ export default class AdsIndexPage extends React.Component {
           </Text>
           <Box as="section">
             <Stack
-              display={{ xs:"none", lg:"flex"}}
-              borderBottom="solid 3px" mb={8} px={2} py={4} borderColor="brand.light1" isInline spacing={8}>
+              display={{ xs: "none", lg: "flex" }}
+              borderBottom="solid 3px"
+              px={2}
+              py={4}
+              borderColor="brand.light1"
+              isInline
+              spacing={8}>
               <Text>Filtrer :</Text>
               <RadioGroup defaultValue="all" name="filter" isInline spacing={8} onChange={(e) => { handleFilter(e.target.value) }}>
                 <Radio value="all">Toutes les annonces</Radio>
@@ -114,14 +119,21 @@ export default class AdsIndexPage extends React.Component {
                 <Radio value="1YRU4xM28ZGl3GpLvUvrUj">Dayboats</Radio>
               </RadioGroup>
             </Stack>
+          </Box>
 
-            {isLoading ?
-              <Flex align="center" justify="center" p={1}>
-                <Spinner size="xs" color="brand.light1" mr={2} />
-                <Text>Chargement en cours...</Text>
-              </Flex>
+          {isLoading ?
+            <Flex align="center" justify="center" p={1}>
+              <Spinner size="xs" color="brand.light1" mr={2} />
+              <Text>Chargement en cours...</Text>
+            </Flex>
 
-              : null}
+            : null}
+          <Box
+            // maxW={"1000px"}
+            ml={{ xs: "-1.5rem", lg: 0 }}
+            mr={{ xs: "-1.5rem", lg: 0 }}
+          >
+
             {adSingleID ?
               <Flex justify="center">
                 <AdCardPortraitLarge
@@ -130,36 +142,40 @@ export default class AdsIndexPage extends React.Component {
                   context="export-whitelabel"
                 />
               </Flex>
-              : null}
+            : null}
 
-            {ads && !adSingleID ?
-              ads.map((edge, i) =>
-                <AdCardLandscape
-                  openAction={() => { openAd(edge.sys.id) }}
-                  key={edge.sys.id}
-                  isInIframe={true}
-                  to={edge.fields.slug}
-                  name={edge.fields.name}
-                  price={edge.fields.price}
-                  brand={(edge.fields.refBrand) ? edge.fields.refBrand.name : null}
-                  date={edge.fields.date ? <DateYear date={edge.fields.date} /> : '-'}
-                  place={edge.fields.department}
-                  region={edge.fields.department}
-                  images={edge.fields.images}
-                  publicationDate={<FullDate date={edge.fields.publicationDate} />}
-                />)
-              : null}
+            <Box p={{ xs:"1rem", lg:0 }}>
+              {ads && !adSingleID ?
+                ads.map((edge, i) =>
+                  <AdCardLandscape
+                    openAction={() => { openAd(edge.sys.id) }}
+                    key={edge.sys.id}
+                    isInIframe={true}
+                    to={edge.fields.slug}
+                    name={edge.fields.name}
+                    price={edge.fields.price}
+                    brand={(edge.fields.refBrand) ? edge.fields.refBrand.name : null}
+                    date={edge.fields.date ? <DateYear date={edge.fields.date} /> : '-'}
+                    place={edge.fields.department}
+                    region={edge.fields.department}
+                    images={edge.fields.images}
+                    publicationDate={<FullDate date={edge.fields.publicationDate} />}
+                  />)
+                : null}
+            </Box>
 
-            { !isLoading && ads.length === 0 ?
+            {!isLoading && ads.length === 0 ?
               <Text>Pas d'annonce actuellement selon vos critères.</Text>
               : null}
           </Box>
+
           <Text
             textAlign="center"
             color="gray.500"
             fontSize={13}
-          >Les annonces d'occasion Dériveur Service sont carénnées par Wanaboat.fr, <Link isExternal={true} href="https://www.wanaboat.fr/">la référence du bateaux d'occasion</Link>.</Text>
+          >Les annonces d'occasion Dériveur Service sont carénnées par Wanaboat.fr, <Link isExternal={true} target="_blank" href="https://www.wanaboat.fr/">la référence du bateaux d'occasion</Link>.</Text>
         </Stack>
+
       </Layout>
     )
   }

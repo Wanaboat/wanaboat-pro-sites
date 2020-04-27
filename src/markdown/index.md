@@ -16,63 +16,21 @@ phoneNumberRaw: 33612345678
 offers:
   - buttonLabel: Nos services
     buttonTarget: /services/
-    image: /img/catamaran.jpg
+    image: /img/image-atelier.jpg
     text: >-
-      Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis
-      rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
-      viverra pharetra.
-
-
-      Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue
-      id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum
-      tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-      imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui.
-      Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi.
-      Vivamus non condimentum tellus.
-
-
-      * Atelier
-
-      * Hivernage
+      Vous naviguez et on s'occupe du reste. Dériveur Services, c'est toutes une gamme d'offre pour que naviguez ne soit que plaisir. Notre atelier prend en charge la rénovation, l'entretien ou les révisions de vos bateaux de voile légère. 
     title: Services
   - buttonLabel: Le matériel neuf
     buttonTarget: /materiel-neuf/
     image: /img/remorque-combinee.jpg
     text: >-
-      Proin eu molestie massa. Vestibulum tincidunt, tortor vitae venenatis
-      rutrum, augue libero ullamcorper nisl, sed egestas erat lectus ut dui.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
-      viverra pharetra.
-
-
-      Donec eu sodales urna, vitae blandit dui. Nullam hendrerit accumsan augue
-      id feugiat. Vivamus nec convallis nisi. Vivamus non condimentum
-      tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-      imperdiet viverra pharetra. Donec eu sodales urna, vitae blandit dui.
-      Nullam hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi.
-      Vivamus non condimentum tellus.
-
-
-      * Voilerie
-
-      * Matos
+      Nous proposons aussi du matériel neuf pour mettre au point ou améliorer votre bateau. Remorque, taud, accastillage, gréement, voiles : tout pour aller sur l'eau en sécurité avec du matériel de qualité et de grand marque.
     title: Matériel neuf
   - buttonLabel: Toutes nos occasions
     buttonTarget: occasions/
     image: /img/image-materiel-occasion.jpg
     text: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet
-      viverra pharetra. Donec eu sodales urna, vitae blandit dui. Nullam
-      hendrerit accumsan augue id feugiat. Vivamus nec convallis nisi. Vivamus
-      non condimentum tellus. Proin eu molestie massa. Vestibulum tincidunt,
-      tortor vitae venenatis rutrum, augue libero ullamcorper nisl, sed egestas
-      erat lectus ut dui. Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. Nunc imperdiet viverra pharetra. Donec eu sodales urna, vitae
-      blandit dui. Nullam hendrerit accumsan augue id feugiat. Vivamus nec
-      convallis nisi. Vivamus non condimentum tellus. Proin eu molestie massa.
-      Vestibulum tincidunt, tortor vitae venenatis rutrum, augue libero
-      ullamcorper nisl, sed egestas erat lectus ut dui. 
+      Vos envies de navigations évoluent, votre bateau doit évoluer avec. Alors nous proposons une large sélection de bateau d'occasion. Pour la balade, l'initiation, ou la performance et la régate.
     title: Occasion
 ---
 

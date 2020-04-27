@@ -7,6 +7,11 @@ import Content, { HTMLContent } from "../components/Content"
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
 // import Img from "gatsby-image"
 
+import {
+  Box,
+  Heading,
+} from "@chakra-ui/core";
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -16,16 +21,27 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content" style={{ maxWidth: "850px" }}>
-        <h1 className="title is-size-2">{title}</h1>
-        <h2 className="subtitle is-5">{description}</h2>
-        {/* <img src={ featuredImage } /> */}
-        {/* <Img fixed={featuredImage.fixed} /> */}
-        <PostContent content={content} />
-      </div>
-    </section>
+    <Box
+      maxW={"900px"}
+      mx="auto"
+      px={{ xs: "1.5rem", lg: "5rem" }}
+      py={{ xs: "2rem", lg: "5rem" }}
+    >
+      <Heading mb={4} as="h1">{title}</Heading>
+      { (description) ?
+        <Heading
+          as="h3"
+          color="gray.700"
+          fontSize={{ xs: 16, lg: 22 }}
+          textTransform="uppercase"
+          letterSpacing="0.35rem"
+        >
+          {description}
+        </Heading> : null }
+        <Box my={4}>
+          <PostContent content={content} />
+        </Box>
+    </Box>
   )
 }
 

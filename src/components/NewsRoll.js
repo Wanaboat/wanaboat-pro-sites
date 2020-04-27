@@ -53,7 +53,7 @@ class NewsRoll extends React.Component {
               :null}
               </Box>
               
-              <Stack spacing={4} px={10} py={5}>
+              <Stack spacing={4} px={{xs:"1.5rem", lg:"5rem"}} py={5}>
                 <Heading
                   as="h4"
                   textTransform="uppercase"

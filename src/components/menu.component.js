@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import {
-  Box,
+  Icon,
   Flex,
   Link } from "@chakra-ui/core";
 
@@ -101,13 +101,16 @@ class Menu extends Component {
           width="45px"
           height="45px"
           wrap="wrap"
+          border="none"
           p={2}
           justifyContent="space-between"
           onClick={ () => { this.setState({navIsOpen: !navIsOpen} )}}
         >
-          <Box w="100%" h={"3px"} bg="brand.light1" />
-          <Box w="100%" h={"3px"} bg="brand.light1" />
-          <Box w="100%" h={"3px"} bg="brand.light1" />
+            <Icon
+              name={navIsOpen ? "menuClose" : "menu" }
+              size="38px"
+              color="white"
+            />
         </Flex>
       </Flex>
     )
