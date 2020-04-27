@@ -1,7 +1,7 @@
 ---
 templateKey: boats-summary
 title: Les bateaux de voile légère
-description: Les bateaux de voile légère
+description: Initiation, balade, performance, un bateau pour chaque goût
 path: bateaux
 ---
 

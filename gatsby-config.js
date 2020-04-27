@@ -76,7 +76,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Dériveurs Services`,
+        name: `Dériveur Service`,
         short_name: `DS`,
         start_url: `/`,
         background_color: `hsl(0, 0%, 21%)`,
@@ -112,7 +112,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
         enableIdentityWidget: true,
         publicPath: `admin`,
-        htmlTitle: `Gestion des contenus Dériveurs Services`,
+        htmlTitle: `Gestion des contenus Dériveur Service`,
         htmlFavicon: `src/images/favicon.png`,
         includeRobots: false,
         },

@@ -15,7 +15,7 @@ import css from "./hero.module.scss";
 // import HeroMobileWebp from "../images/hero-mobile.webp"
 // import HeroMobileJpg from "../images/hero-mobile.jpg"
 
-// import HeroDesktopWebp from "../images/hero-desktop.webp"
+import HeroDesktopWebp from "../images/hero-desktop.webp"
 import HeroDesktopJpg from "../images/hero-desktop.jpg"
 
 import {
@@ -103,7 +103,14 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
         display={{ xs:"none", lg:"initial"}}
       >
         <picture className={css.headerIllu}>
-
+          <source 
+            srcSet={HeroDesktopWebp}
+            type="image/webp"
+          />
+          <source 
+            srcSet={HeroDesktopJpg}
+            type="image/jpeg"
+          />
           <img
             alt="Dériveur Services"
             loading="lazy"
