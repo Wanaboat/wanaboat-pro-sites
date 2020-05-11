@@ -154,7 +154,7 @@ export default class AdsIndexPage extends React.Component {
                     to={edge.fields.slug}
                     name={edge.fields.name}
                     price={edge.fields.price}
-                    brand={(edge.fields.refBrand) ? edge.fields.refBrand.name : null}
+                    brand={(edge.fields.refBrand) ? edge.fields.refBrand.fields.name : null}
                     date={edge.fields.date ? <DateYear date={edge.fields.date} /> : '-'}
                     place={edge.fields.department}
                     region={edge.fields.department}
