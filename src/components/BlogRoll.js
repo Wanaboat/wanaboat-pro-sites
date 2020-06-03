@@ -36,7 +36,7 @@ class BlogRoll extends React.Component {
                 mt={1}
                 textTransform="uppercase"
                 fontSize={{ lg: 14 }}
-                color="gray.400"
+                color="gray.500"
               >
                 {post.frontmatter.date}
               </Text>
