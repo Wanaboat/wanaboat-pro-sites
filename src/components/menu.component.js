@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import {
-  Icon,
   Flex,
   Link,
-  Text
+  PseudoBox
 } from "@chakra-ui/core";
 
 // import logo from "../images/logo.svg"
@@ -97,26 +96,20 @@ class Menu extends Component {
           )
         )}
         </Flex>
-        <Flex
+        <PseudoBox
+          color="gray.700"
+          backgroundColor="brand.light1"
           display={{ xs:"flex", lg:"none"}}
           as="button"
-          width="45px"
-          height="45px"
-          wrap="wrap"
           border="none"
-          p={2}
-          justifyContent="space-between"
+          p=".25rem .5rem"
+          mr=".5rem"
+          borderRadius="md"
           aria-label="Menu"
           onClick={ () => { this.setState({navIsOpen: !navIsOpen} )}}
         >
-            <Icon
-              name={navIsOpen ? "menuClose" : "menu" }
-              size="38px"
-              color="white"
-
-            />
-            <Text display={{xs:"none"}}>Menu</Text>
-        </Flex>
+            Menu
+        </PseudoBox>
       </Flex>
     )
   }

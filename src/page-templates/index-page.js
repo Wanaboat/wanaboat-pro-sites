@@ -15,8 +15,11 @@ import css from "./hero.module.scss";
 // import HeroMobileWebp from "../images/hero-mobile.webp"
 // import HeroMobileJpg from "../images/hero-mobile.jpg"
 
-import HeroDesktopWebp from "../images/hero-desktop.webp"
-import HeroDesktopJpg from "../images/hero-desktop.jpg"
+// import HeroDesktopWebp from "../images/hero-desktop.webp"
+import HeroDesktopJpg from "../images/hero-deriveur-services.jpg"
+// import HeroMask from "../hero-mask.svg"
+
+
 
 import {
   Box,
@@ -29,24 +32,203 @@ import {
   Stack
 } from "@chakra-ui/core";
 
-const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw, openingHours }) => {
+// const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw, openingHours }) => {
+//   return (
+//     <Box
+//       id="home-hero"
+//       bg="brand.dark1"
+
+//       p={{ xs: 30, lg: 70 }}
+//     >
+//       <Stack spacing={{ xs: 6, lg: 10 }} maxW={{lg:"450px", xl:"650px", xxl:"700px"}}>
+//         <Box>
+//           <Heading
+//             as="h1"
+//             fontSize={{ xs: 26, md:30, lg: 58 }}
+//             color="brand.light1"
+//           >{heading}</Heading>
+//           <Text
+//             color="white"
+//             fontSize={{ xs: 16, md:18, lg: 22 }}
+//             textTransform="uppercase"
+//             letterSpacing="0.35rem"
+//           >
+//             {subheading}
+//           </Text>
+//         </Box>
+
+//         <Text
+//           fontSize={{ xs: 14, lg: 18 }}
+//           color="white"
+//         >
+//           {chapo}
+//         </Text>
+
+//         <Box>
+//           <Text fontSize={{ xs: 12, md: 24 }} fontWeight="bold" color="white" mb={4}>Accès et contact :</Text>
+//           <SimpleGrid
+//             fontSize={{ xs: 12, lg: 18 }}
+//             color="white" columns={{ xs: 1, lg: 2 }}>
+//             <Text>
+//               {address}
+//               <br />
+//               {openingHours}
+//             </Text>
+//             <Box>
+//               <Text mb={4}>Tél : <Link href={`tel:+${phoneNumberRaw}`}>{phoneNumber}</Link></Text>
+//               <PseudoBox
+//                 mt={2}
+//                 as={GatsbyLink}
+//                 to="/nous-trouver/"
+//                 backgroundColor="brand.light1"
+//                 color="gray.700"
+//                 letterSpacing="0.035rem"
+//                 fontSize={13}
+//                 fontWeight="bold"
+//                 textTransform="uppercase"
+//                 borderRadius={3}
+//                 py={2}
+//                 px={4}
+//               >
+//                 Contacts
+//               </PseudoBox>
+//             </Box>
+//           </SimpleGrid>
+//         </Box>
+//       </Stack>
+
+//       <Box
+//         position="absolute"
+//         right={0}
+//         top={"103px"}
+//         w="500px"
+//         h="500px"
+//         display={{ xs:"none", lg:"initial"}}
+//       >
+//         <picture className={css.headerIllu}>
+//           <source 
+//             srcSet={HeroDesktopWebp}
+//             type="image/webp"
+//           />
+//           <source 
+//             srcSet={HeroDesktopJpg}
+//             type="image/jpeg"
+//           />
+//           <img
+//             alt="Dériveur Services"
+//             loading="lazy"
+//             style={{
+//             objectFit: "cover",
+//             width: "100%",
+//             height: "100%"
+//           }} src={HeroDesktopJpg} />
+
+//           <svg width="0" height="0">
+//             <defs>
+//               <clipPath id="headerIlluMask">
+//               <path fillRule="evenodd" clipRule="evenodd" d="M207.132 0.12207L60.6676 146.587C-20.2226 227.478 -20.2226 358.626 60.6678 439.517C98.8814 477.73 148.311 497.892 198.36 500H215.905C265.954 497.892 315.384 477.73 353.598 439.517L353.898 439.216L499.203 293.911V292.192L498.891 291.88H499.203V0H207.295V0.28418L207.132 0.12207Z" fill="#FF0000"/>
+//               </clipPath>
+//             </defs>
+//           </svg>
+//         </picture>
+//         <Box
+//           display={{ xs: "none", md: "block" }}
+//           position="absolute"
+//           top={"9rem"}
+//           right={"0"}
+//           zIndex={'base'}
+//         >
+//           <svg width="321" height="321" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path fillRule="evenodd" clipRule="evenodd" d="M132.979 0.0783409L38.9487 94.1088C-12.9829 146.04 -12.9829 230.238 38.9487 282.17C63.4829 306.704 95.2188 319.647 127.352 321H138.607C170.74 319.647 202.475 306.704 227.01 282.17L320.488 188.691V187.587L320.288 187.387H320.488V0H133.083V0.182537L132.979 0.0783409Z" fill="#99FBF5"/>
+//           </svg>
+//         </Box>
+//       </Box>
+//     </Box>
+//   )
+// }
+
+const Hero2 = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw, openingHours }) => {
   return (
     <Box
       id="home-hero"
       bg="brand.dark1"
-
-      p={{ xs: 30, lg: 70 }}
+      // p={{ xs: 30, lg: 70 }}
+      position="relative"
+      overflow="hidden"
     >
-      <Stack spacing={{ xs: 6, lg: 10 }} maxW={{lg:"450px", xl:"650px", xxl:"700px"}}>
+      <Box
+        position="absolute"
+        right={0}
+        top={"0"}
+        w="100%"
+        h="100%"
+        zIndex="base"
+        display={{ xs: "none", lg: "initial" }}
+      >
+        <picture className={css.headerIllu}>
+          {/* <source 
+            srcSet={HeroDesktopWebp}
+            type="image/webp"
+          /> */}
+          <source
+            srcSet={HeroDesktopJpg}
+            type="image/jpeg"
+          />
+          <img
+            alt="Dériveur Services"
+            loading="lazy"
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "100%"
+            }} src={HeroDesktopJpg} />
+
+          {/* <svg width="0" height="0">
+            <defs>
+              <clipPath id="headerIlluMask">
+              <path fillRule="evenodd" clipRule="evenodd" d="M207.132 0.12207L60.6676 146.587C-20.2226 227.478 -20.2226 358.626 60.6678 439.517C98.8814 477.73 148.311 497.892 198.36 500H215.905C265.954 497.892 315.384 477.73 353.598 439.517L353.898 439.216L499.203 293.911V292.192L498.891 291.88H499.203V0H207.295V0.28418L207.132 0.12207Z" fill="#FF0000"/>
+              </clipPath>
+            </defs>
+          </svg> */}
+        </picture>
+        <Box
+          display={{ xs: "none", md: "block" }}
+          position="absolute"
+          top={"0"}
+          left={"0"}
+          zIndex={'base'}
+        >
+          {/* <svg width="321" height="321" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" clipRule="evenodd" d="M132.979 0.0783409L38.9487 94.1088C-12.9829 146.04 -12.9829 230.238 38.9487 282.17C63.4829 306.704 95.2188 319.647 127.352 321H138.607C170.74 319.647 202.475 306.704 227.01 282.17L320.488 188.691V187.587L320.288 187.387H320.488V0H133.083V0.182537L132.979 0.0783409Z" fill="#99FBF5"/>
+          </svg> */}
+
+<svg width="1195" height="570" viewBox="0 0 1195 570" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M732 0H0V569.5H992L732 0Z" fill="#0C4073" fill-opacity="0.63"/>
+<path d="M734 0H0V569.5H1194.5L734 0Z" fill="#0C4073" fill-opacity="0.25"/>
+</svg>
+
+
+        </Box>
+      </Box>
+
+      <Stack
+        spacing={{ xs: 6, lg: 8 }}
+        p={{ xs: 30, lg: 70 }}
+        maxW={{ lg: "750px", xxl: "750px" }}
+        zIndex="modal"
+        position="relative"
+        backgroundImage='url(../images/hero-mask.svg)'
+        backgroundSize="100%"
+      >
         <Box>
           <Heading
             as="h1"
-            fontSize={{ xs: 26, md:30, lg: 58 }}
+            fontSize={{ xs: 26, md: 30, lg: 48 }}
             color="brand.light1"
           >{heading}</Heading>
           <Text
             color="white"
-            fontSize={{ xs: 16, md:18, lg: 22 }}
+            fontSize={{ xs: 16, md: 17, lg: 20 }}
             textTransform="uppercase"
             letterSpacing="0.35rem"
           >
@@ -93,56 +275,10 @@ const Hero = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRaw
           </SimpleGrid>
         </Box>
       </Stack>
-
-      <Box
-        position="absolute"
-        right={0}
-        top={"103px"}
-        w="500px"
-        h="500px"
-        display={{ xs:"none", lg:"initial"}}
-      >
-        <picture className={css.headerIllu}>
-          <source 
-            srcSet={HeroDesktopWebp}
-            type="image/webp"
-          />
-          <source 
-            srcSet={HeroDesktopJpg}
-            type="image/jpeg"
-          />
-          <img
-            alt="Dériveur Services"
-            loading="lazy"
-            style={{
-            objectFit: "cover",
-            width: "100%",
-            height: "100%"
-          }} src={HeroDesktopJpg} />
-
-          <svg width="0" height="0">
-            <defs>
-              <clipPath id="headerIlluMask">
-              <path fillRule="evenodd" clipRule="evenodd" d="M207.132 0.12207L60.6676 146.587C-20.2226 227.478 -20.2226 358.626 60.6678 439.517C98.8814 477.73 148.311 497.892 198.36 500H215.905C265.954 497.892 315.384 477.73 353.598 439.517L353.898 439.216L499.203 293.911V292.192L498.891 291.88H499.203V0H207.295V0.28418L207.132 0.12207Z" fill="#FF0000"/>
-              </clipPath>
-            </defs>
-          </svg>
-        </picture>
-        <Box
-          display={{ xs: "none", md: "block" }}
-          position="absolute"
-          top={"9rem"}
-          right={"0"}
-          zIndex={'base'}
-        >
-          <svg width="321" height="321" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fillRule="evenodd" clipRule="evenodd" d="M132.979 0.0783409L38.9487 94.1088C-12.9829 146.04 -12.9829 230.238 38.9487 282.17C63.4829 306.704 95.2188 319.647 127.352 321H138.607C170.74 319.647 202.475 306.704 227.01 282.17L320.488 188.691V187.587L320.288 187.387H320.488V0H133.083V0.182537L132.979 0.0783409Z" fill="#99FBF5"/>
-          </svg>
-        </Box>
-      </Box>
     </Box>
   )
 }
+
 
 export const IndexPageTemplate = ({
   alertBanner,
@@ -171,7 +307,7 @@ export const IndexPageTemplate = ({
           {alertBanner}
         </Text>
       </Flex>
-      <Hero
+      <Hero2
         heading={heading}
         subheading={subheading}
         chapo={chapo}
@@ -184,7 +320,7 @@ export const IndexPageTemplate = ({
         as="section"
         bg="#FAFAFA"
         justify="space-around"
-        p={{ xs:4, lg:8 }}
+        p={{ xs: 4, lg: 8 }}
         borderBottom="solid 1px"
         borderBottomColor="gray.100"
         flexWrap={{ xs: "wrap", lg: "nowrap" }}
