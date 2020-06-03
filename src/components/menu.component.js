@@ -104,7 +104,7 @@ class Menu extends Component {
           border="none"
           p=".25rem .5rem"
           mr=".5rem"
-          borderRadius="md"
+          borderRadius="sm"
           aria-label="Menu"
           onClick={ () => { this.setState({navIsOpen: !navIsOpen} )}}
         >

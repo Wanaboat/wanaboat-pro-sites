@@ -69,7 +69,7 @@ const FeatureGrid = ({ gridItems }) => (
         >
           <Box>
             <Heading
-              as="h3"
+              as="h2"
               fontSize={{ xs: 'xl', lg: '3xl' }}
               mb={5}
               display="inline-block"

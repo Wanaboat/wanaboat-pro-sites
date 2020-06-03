@@ -217,8 +217,6 @@ const Hero2 = ({ heading, subheading, chapo, phoneNumber, address, phoneNumberRa
         maxW={{ lg: "750px", xxl: "750px" }}
         zIndex="modal"
         position="relative"
-        backgroundImage='url(../images/hero-mask.svg)'
-        backgroundSize="100%"
       >
         <Box>
           <Heading
