@@ -16,7 +16,7 @@ export const Header = ({ siteTitle }) => (
     justify={{ xs:"space-between", lg:"center"}}
     align={{ xs:"center", lg:"initial"}}
     position={{xs:"fixed", lg:"initial"}}
-    zIndex="modal"
+    zIndex="tooltip"
   >
     <Box w={"160px"} color="brand.light1" fontWeight="bold" pl={2} display={{ xs:"initial", lg:"none"}}>
         <Link to="/">
