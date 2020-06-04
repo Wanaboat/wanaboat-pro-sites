@@ -10,8 +10,7 @@ export const Footer = ({ title, subTitle }) => (
     bg="brand.dark1"
     justify="center"
     align="center"
-    mt="2rem"
-    >
+  >
       <Box>
         <Text
           fontSize={{ xs:22, lg:42}}
